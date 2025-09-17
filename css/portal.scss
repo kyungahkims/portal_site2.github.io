@@ -1,0 +1,608 @@
+:root {
+	--font-family: 'Pretendard';
+	--black-color: #333333;
+	--vh: 100%;
+}
+
+/* font */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/* Normalize */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+	font-family: inherit;
+	outline: none;
+	border: none;
+}
+
+button {
+	background-color: transparent;
+	color: inherit;
+	cursor: pointer;
+}
+
+textarea {
+	resize: none;
+}
+
+.img {
+	width: 100%;
+	height: auto;
+	image-rendering: -webkit-optimize-contrast;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+}
+
+body {
+	height: calc(var(--vh, 1vh) * 100);
+	font-family: var(--font-family);
+	color: var(--black-color);
+}
+
+/**************************************/
+.wrap {
+	width: 100%;
+	min-width: 960px;
+	padding: 46px 76px;
+
+	/* 구글 */
+	&.google {
+		.box {
+			a {
+				display: none;
+
+				&.google {
+					display: block;
+				}
+			}
+		}
+
+		.logo {
+			width: 270px;
+			height: 91px;
+			background: url('../img/logo-google.png') no-repeat center/contain;
+			margin: 236px auto 57px;
+		}
+
+		.search_wrap {
+			border: 1px solid #4285f4;
+
+			&.active {
+				&::before {
+					background: url('../img/logo-google-2.png') no-repeat center;
+				}
+
+				input {
+					border-bottom: 1px solid #4285f4;
+				}
+			}
+		}
+
+		.select_btn {
+			&::before {
+				background: url('../img/logo-google-2.png') no-repeat center/contain;
+			}
+		}
+
+		.search_list {
+			border: 1px solid #4285f4;
+
+			.search_head {
+
+				h5 {
+					color: #4285f4;
+				}
+			}
+		}
+	}
+
+	/* 네이버 */
+	&.naver {
+		.box {
+			a {
+				display: none;
+
+				&.naver {
+					display: block;
+				}
+			}
+		}
+
+		.logo {
+			width: 276px;
+			height: 52px;
+			background: url('../img/logo-naver.png') no-repeat center/contain;
+			margin: 252px auto 80px;
+		}
+
+		.search_wrap {
+			border: 1px solid #03cf5d;
+
+			&.active {
+				&::before {
+					background: url('../img/logo-naver-2.png') no-repeat center/contain;
+				}
+
+				input {
+					border-bottom: 1px solid #03cf5d;
+				}
+			}
+		}
+
+		.select_btn {
+			&::before {
+				background: url('../img/logo-naver-2.png') no-repeat center/contain;
+			}
+		}
+
+		.search_list {
+			border: 1px solid #03cf5d;
+
+			.search_head {
+
+				h5 {
+					color: #03cf5d;
+				}
+			}
+		}
+	}
+
+	/* 다음 */
+	&.daum {
+		.box {
+			a {
+				display: none;
+
+				&.daum {
+					display: block;
+				}
+			}
+		}
+
+		.logo {
+			width: 260px;
+			height: 65px;
+			background: url('../img/logo-daum.png') no-repeat center/contain;
+			margin: 245px auto 74px;
+		}
+
+		.search_wrap {
+			border: 1px solid #273552;
+
+			&.active {
+				&::before {
+					background: url('../img/logo-daum-2.png') no-repeat center/contain;
+				}
+
+				input {
+					border-bottom: 1px solid #273552;
+				}
+			}
+		}
+
+		.select_btn {
+			&::before {
+				background: url('../img/logo-daum-2.png') no-repeat center/contain;
+			}
+		}
+
+		.search_list {
+			border: 1px solid #273552;
+
+			.search_head {
+
+				h5 {
+					color: #273552;
+				}
+			}
+		}
+	}
+
+	/* 공통 */
+	.box {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		column-gap: 30px;
+		font-size: 14px;
+		color: #666;
+
+		button {
+			&.more_btn {
+				width: 18px;
+				height: 18px;
+				background: url('../img/icon-menu.png') no-repeat center;
+			}
+
+			&.setting_btn {
+				width: 18px;
+				height: 18px;
+				background: url('../img/icon-setting.png') no-repeat center/contain;
+			}
+		}
+	}
+
+	.search_group {
+		position: relative;
+		width: 700px;
+		min-height: 50px;
+		margin: auto;
+		margin: 0 auto 55px;
+	}
+
+	.search_wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: 50px;
+		border-radius: 200px;
+		background-color: #fff;
+		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+		padding-right: 21px;
+
+		/* 포커스 시 */
+		&.active {
+			position: absolute;
+			border: none;
+			background-color: transparent;
+			box-shadow: none;
+			padding: 0 22px;
+			z-index: 998;
+
+			&::before {
+				position: absolute;
+				content: "";
+				width: 18px;
+				height: 18px;
+				z-index: 999;
+			}
+
+			.select {
+				display: none;
+			}
+
+			input {
+				position: relative;
+				width: 100%;
+				border-radius: 30px 30px 0 0;
+				padding-left: 34px;
+			}
+
+			.search_btn {
+				position: absolute;
+				right: 21px;
+			}
+		}
+
+		.select {
+			position: relative;
+			width: 96px;
+			height: 100%;
+			flex-shrink: 0;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%);
+				width: 1px;
+				height: 23px;
+				background-color: #d9d9d9;
+			}
+
+			.select_btn {
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				width: 100%;
+				height: 100%;
+
+				&::before {
+					content: "";
+					width: 18px;
+					height: 18px;
+				}
+
+				&::after {
+					content: "";
+					width: 13px;
+					height: 7px;
+					background: url('../img/icon-selectbox.png') no-repeat center/contain;
+					margin: 0 20px;
+				}
+			}
+		}
+
+		.select_active {
+			position: relative;
+			top: 49px;
+			left: -1px;
+			min-width: 97px;
+			border-radius: 5px;
+			box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+			border: solid 0.5px #d9d9d9;
+			background-color: #f9fcff;
+			z-index: 998;
+
+			button {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				padding: 15px 22px;
+
+				&.select_btn {
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+
+					&::after {
+						content: "";
+						right: 0;
+						width: 13px;
+						height: 7px;
+						background: url('../img/icon-selectbox.png') no-repeat center/contain;
+						transform: rotate(180deg);
+					}
+				}
+
+				&:not(:last-child) {
+					border-bottom: 1px solid #d9d9d9;
+				}
+
+				&::before {
+					content: "";
+					display: inline-block;
+					width: 18px;
+					height: 18px;
+				}
+
+				&.google {
+					&::before {
+						background: url('../img/logo-google-2.png') no-repeat center/contain;
+					}
+				}
+
+				&.naver {
+					&::before {
+						background: url('../img/logo-naver-2.png') no-repeat center/contain;
+					}
+				}
+
+				&.daum {
+					&::before {
+						background: url('../img/logo-daum-2.png') no-repeat center/contain;
+					}
+				}
+			}
+		}
+
+		input {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			font-size: 16px;
+			padding: 0 20px;
+
+			&::placeholder {
+				font-size: 16px;
+				color: #d9d9d9;
+			}
+		}
+
+		.search_btn {
+			width: 22px;
+			height: 22px;
+			flex-shrink: 0;
+			background: url('../img/icon-search.png') no-repeat center/contain;
+		}
+	}
+
+	.search_list {
+		display: none;
+		position: absolute;
+		width: 700px;
+		top: -1px;
+		border-radius: 26px;
+		background-color: #fff;
+		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+		padding: 50px 22px 36px;
+
+		.search_head {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 33px;
+
+			h5 {
+				font-size: 20px;
+				font-weight: 600;
+			}
+
+			.total_remove_btn {
+				font-size: 20px;
+				color: #c9c9c9;
+			}
+		}
+
+		ul {
+			margin-top: 28px;
+
+			li {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+
+				.left {
+					display: flex;
+					align-items: center;
+
+					&::before {
+						content: "";
+						display: inline-block;
+						width: 24px;
+						height: 24px;
+						background: url('../img/icon-time.svg') no-repeat center;
+						margin-right: 13px;
+					}
+
+					p {
+						font-size: 20px;
+						color: #666;
+					}
+				}
+
+				.right {
+					display: flex;
+					align-items: center;
+
+					span {
+						font-size: 18px;
+						color: #666;
+					}
+
+					.remove_btn {
+						width: 11px;
+						height: 11px;
+						background: url('../img/icon-close.svg') no-repeat center;
+						margin-left: 14px;
+					}
+				}
+			}
+		}
+	}
+
+	.site_wrap {
+		display: grid;
+		grid-template-columns: repeat(10, minmax(50px, max-content));
+		justify-content: center;
+		grid-gap: 40px;
+		row-gap: 20px;
+
+		a {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			&::before {
+				content: "";
+				display: block;
+				width: 32px;
+				height: 32px;
+				border-radius: 18px;
+				border: 1px solid #e1e1e1;
+				background-color: rgba(255, 255, 255, 0.8);
+				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+				padding: 8px;
+			}
+
+			span {
+				font-size: 14px;
+				font-weight: 500;
+				text-align: center;
+				margin-top: 17px;
+				white-space: nowrap;
+			}
+		}
+
+		a.naver::before {
+			background: url('../img/icon-naver.png') no-repeat center;
+		}
+
+		a.google::before {
+			background: url('../img/icon-google.png') no-repeat center;
+			background-color: rgba(246, 246, 246, 0.8);
+		}
+
+		a.daum::before {
+			background: url('../img/icon-daum.png') no-repeat center;
+			background-color: rgba(246, 246, 246, 0.8);
+		}
+
+		a.youtobe::before {
+			background: url('../img/icon-youtobe.png') no-repeat center;
+			background-color: rgba(246, 246, 246, 0.8);
+		}
+
+		a.insta::before {
+			background: url('../img/icon-insta.png') no-repeat center;
+		}
+
+		a.coupang::before {
+			background: url('../img/icon-coupang.png') no-repeat center;
+			background-color: rgba(246, 246, 246, 0.8);
+		}
+
+		a.gmarket::before {
+			background: url('../img/icon-gmarket.png') no-repeat center;
+		}
+
+		a.auction::before {
+			background: url('../img/icon-auction.png') no-repeat center;
+		}
+
+		a.store::before {
+			background: url('../img/icon-11.png') no-repeat center;
+		}
+
+		a.ali::before {
+			background: url('../img/icon-ali.png') no-repeat center;
+		}
+	}
+
+	.go {
+		&::before {
+			content: "";
+			display: block;
+			width: 32px;
+			height: 32px;
+			border-radius: 18px;
+			border: 1px solid #e1e1e1;
+			background: url('../img/icon-plus.png') no-repeat center;
+			background-color: rgba(255, 255, 255, 0.8);
+			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+			padding: 8px;
+			margin-bottom: 17px;
+		}
+
+		span {
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 1.29;
+			text-align: center;
+			white-space: nowrap;
+		}
+	}
+}
