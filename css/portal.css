@@ -626,6 +626,9 @@ body {
 .wrap .search_list ul {
   flex: 1;
 }
+.wrap .search_list ul li {
+  cursor: pointer;
+}
 .wrap .search_list ul.recent_search {
   margin-top: 22px;
 }

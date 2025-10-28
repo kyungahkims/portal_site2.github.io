@@ -1,4 +1,4 @@
-/* 최근검색어 */
+/* 검색어 팝업 */
 $(".search_wrap input").on("focus", function () {
 	setTimeout(function () {
 		$(".search_wrap").addClass('active');
@@ -6,7 +6,7 @@ $(".search_wrap input").on("focus", function () {
 	}, 300);
 });
 
-$(".search_wrap input").on("blur", function () {
+$('.wrap').click(function () {
 	setTimeout(function () {
 		$(".search_wrap").removeClass('active');
 		$(".search_list").hide();
@@ -14,7 +14,7 @@ $(".search_wrap input").on("blur", function () {
 });
 
 /* 클릭 이벤트 전파 방지 */
-$('.select, .setting_modal, .box .more_btn, .site_wrap .more_btn, .site_wrap .more_pop').click(function (e) {
+$('.select, .setting_modal, .box .more_btn, .site_wrap .more_btn, .site_wrap .more_pop, .search_wrap, .search_list').click(function (e) {
 	e.stopPropagation();
 });
 

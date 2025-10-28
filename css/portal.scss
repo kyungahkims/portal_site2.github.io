@@ -888,6 +888,10 @@ body {
 		ul {
 			flex: 1;
 
+			li {
+				cursor: pointer;
+			}
+
 			&.recent_search {
 				margin-top: 22px;
 
