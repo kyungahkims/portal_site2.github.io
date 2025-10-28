@@ -81,3 +81,30 @@ $('.more_pop .modify_btn').click(function () {
 $('.modal_wrap .close_btn, .modal_wrap .cancle_btn').click(function () {
 	$('.modal_wrap').css('display', 'none');
 });
+
+/* 여러 개 탭 */
+$('.tab_wrap').each(function () {
+	const $tabWrap = $(this);
+
+	$tabWrap.find('button').click(function () {
+		$tabWrap.find('button').removeClass('active');
+		$(this).addClass('active');
+	});
+
+	$tabWrap.find('button').eq(0).trigger('click');
+});
+
+
+/*슬라이드 */
+const swiper1 = new Swiper('.swiper1.swiper', {
+	slidesPerView: 'auto',
+	loop: true,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	pagination: {
+		el: ".swiper-pagination",
+		type: "fraction",
+	},
+});
