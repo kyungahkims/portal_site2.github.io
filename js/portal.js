@@ -1,5 +1,7 @@
 /* 검색어 팝업 */
 $(".search_wrap input").on("focus", function () {
+	$('.select_active').addClass('select').removeClass('select_active');
+
 	setTimeout(function () {
 		$(".search_wrap").addClass('active');
 		$(".search_list").show();
@@ -94,6 +96,13 @@ $('.tab_wrap').each(function () {
 	$tabWrap.find('button').eq(0).trigger('click');
 });
 
+
+$('.pop3 .tab_wrap button').click(function () {
+	$('.tabcontent').hide();
+	$('.tabcontent').eq($(this).index()).show();
+});
+
+$('.pop3 .tab_wrap button').eq(0).trigger("click");
 
 /*슬라이드 */
 const swiper1 = new Swiper('.swiper1.swiper', {
