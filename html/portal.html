@@ -14,7 +14,6 @@
 </head>
 
 <body>
-	<!-- .wrap에 google, naver, daum 클래스 추가 -->
 	<div class="wrap google">
 		<div class="box">
 			<a href="#" class="mail google">Gmail</a>
@@ -134,804 +133,856 @@
 					<li><a href="#" class="setting_27"><span>카카오 비즈니스</span></a></li>
 				</ul>
 			</div>
-
 		</div>
-
-		<div class="logo" role="img" aria-label="구글"></div>
-
-		<div class="search_group">
-			<div class="search_wrap">
-				<!-- .select .select_active 클래스 토글 -->
-				<div class="select">
-					<button type="button" class="google select_btn" aria-label="포털사이트 선택 버튼, 구글 선택됨"></button>
-					<button type="button" class="naver" aria-label="네이버"></button>
-					<button type="button" class="daum" aria-label="다음"></button>
-				</div>
-				<input type="text" placeholder="검색어를 입력해 주세요.">
-				<button type="button" class="search_btn" aria-label="검색 버튼"></button>
-			</div>
-
-			<!-- ⭐ 1. 최근검색어 -->
-			<!-- <div class="search_list">
-				<div class="search_head">
-					<h5>최근 검색어</h5>
-					<button type="button" class="total_remove_btn">전체삭제</button>
-				</div>
-				<div class="search_body">
-					<ul class="recent_search">
-						<li>
-							<div class="left">
-								<p>한지민</p>
-							</div>
-							<div class="right"><span>8.28</span><button type="button" class="remove_btn" aria-label="삭제 버튼"></button>
-							</div>
-						</li>
-						<li>
-							<div class="left">
-								<p>한지민</p>
-							</div>
-							<div class="right"><span>8.28</span><button type="button" class="remove_btn" aria-label="삭제 버튼"></button>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div> -->
-
-			<!-- ⭐ 2. 연관검색어 A타입-->
-			<!-- <div class="search_list">
-				<div class="search_head">
-					<h5>연관 검색어</h5>
-				</div>
-				<div class="search_body">
-					<ul class="related_search">
-						<li>
-							<div class="left related_link">
-								<p>쿠팡</p>
-								<a href="https://www.coupang.com/" class="link">https://www.coupang.com/</a>
-							</div>
-							<div class="right"><a href="https://www.coupang.com/" class="btn_link">바로가기</a>
-							</div>
-						</li>
-						<li>
-							<div class="left">
-								<p>쿠팡</p>
-							</div>
-						</li>
-						<li>
-							<div class="left">
-								<p>쿠팡 로켓배송</p>
-							</div>
-						</li>
-						<li>
-							<div class="left">
-								<p>쿠팡 플레이</p>
-							</div>
-						</li>
-						<li>
-							<div class="left">
-								<p>쿠팡 고객센터</p>
-							</div>
-						</li>
-						<li>
-							<div class="left">
-								<p>쿠팡 알바</p>
-							</div>
-						</li>
-						<li>
-							<div class="left">
-								<p>쿠팡 파트너스</p>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div> -->
-
-			<!-- ⭐ 3. 연관검색어 B타입-->
-			<!-- <div class="search_list">
-				<div class="search_head">
-					<h5>연관 검색어</h5>
-				</div>
-				<div class="search_body">
-					<ul class="related_search">
-						<li>
-							<div class="left">
-								<p>쿠팡</p>
-							</div>
-						</li>
-						<li>
-							<div class="left">
-								<p>쿠팡 로켓배송</p>
-							</div>
-						</li>
-						<li>
-							<div class="left">
-								<p>쿠팡 플레이</p>
-							</div>
-						</li>
-						<li>
-							<div class="left">
-								<p>쿠팡 고객센터</p>
-							</div>
-						</li>
-						<li>
-							<div class="left">
-								<p>쿠팡 알바</p>
-							</div>
-						</li>
-						<li>
-							<div class="left">
-								<p>쿠팡 파트너스</p>
-							</div>
-						</li>
-					</ul>
-					<div class="related_brand">
-						<div class="related_logo"><img src="../img/icon-coupang-001.png" alt="쿠팡로고" class="img"></div>
-						<h5>오늘은 몇%? 쿠팡 1일 특가</h5>
-						<p>이 가격 딱 오늘까지만!<br>
-							쿠팡 1일 특가로 역대급 득템하세요</p>
-						<a href="#">바로가기</a>
+		<div class="main_bg"></div>
+		<div class="header_mask"></div>
+		<div class="search_wrapper">
+			<!-- .wrap에 google, naver, daum 클래스 추가 -->
+			<div id="logo" class="logo" role="img" aria-label="구글"></div>
+			<div class="search_group">
+				<div class="search_wrap">
+					<!-- .select .select_active 클래스 토글 -->
+					<div class="select">
+						<button type="button" class="google select_btn" aria-label="포털사이트 선택 버튼, 구글 선택됨"></button>
+						<button type="button" class="naver" aria-label="네이버"></button>
+						<button type="button" class="daum" aria-label="다음"></button>
 					</div>
+					<input type="text" placeholder="검색어를 입력해 주세요.">
+					<button type="button" class="search_btn" aria-label="검색 버튼"></button>
 				</div>
-			</div> -->
 
-			<!-- ⭐ 4. 연관검색어 C타입-->
-			<div class="search_list">
-				<div class="search_body">
-					<div class="body_left">
-						<div class="search_head">
-							<h5>인기 <span>검색어</span></h5>
-						</div>
-						<ul class="popular_search">
-							<li>
-								<div class="left">
-									<span class="rank">1</span>
-									<p>쿠팡</p>
-								</div>
-								<div class="right">
-									<span class="new">New</span>
-								</div>
-							</li>
-							<li>
-								<div class="left">
-									<span class="rank">2</span>
-									<p>쿠팡 로켓배송 쿠팡 로켓배송쿠팡 로켓배송쿠팡 로켓배송쿠팡 로켓배송</p>
-								</div>
-								<div class="right">
-									<span class="top">3</span>
-								</div>
-							</li>
-							<li>
-								<div class="left">
-									<span class="rank">3</span>
-									<p>쿠팡 플레이</p>
-								</div>
-								<div class="right">
-									<span class="maintenance"></span>
-								</div>
-							</li>
-							<li>
-								<div class="left">
-									<span class="rank">4</span>
-									<p>쿠팡</p>
-								</div>
-								<div class="right">
-									<span class="new">New</span>
-								</div>
-							</li>
-							<li>
-								<div class="left">
-									<span class="rank">5</span>
-									<p>쿠팡 로켓배송</p>
-								</div>
-								<div class="right">
-									<span class="top">3</span>
-								</div>
-							</li>
-						</ul>
-						<div class="search_head m_0">
-							<h5>최근 <span>검색어</span></h5>
-							<button type="button" class="total_remove_btn">전체삭제</button>
-						</div>
+				<!-- ⭐ 1. 최근검색어 -->
+				<!-- <div class="search_list">
+					<div class="search_head">
+						<h5>최근 검색어</h5>
+						<button type="button" class="total_remove_btn">전체삭제</button>
+					</div>
+					<div class="search_body">
 						<ul class="recent_search">
 							<li>
 								<div class="left">
-									<p>한지민한지민한지민한지민한지민한지민한지민한지민한지민한지민한지민</p>
+									<p>한지민</p>
 								</div>
-								<div class="right"><span>8.28</span><button type="button" class="remove_btn"
-										aria-label="삭제 버튼"></button>
+								<div class="right"><span>8.28</span><button type="button" class="remove_btn" aria-label="삭제 버튼"></button>
 								</div>
 							</li>
 							<li>
 								<div class="left">
 									<p>한지민</p>
 								</div>
-								<div class="right"><span>8.28</span><button type="button" class="remove_btn"
-										aria-label="삭제 버튼"></button>
-								</div>
-							</li>
-							<li>
-								<div class="left">
-									<p>한지민</p>
-								</div>
-								<div class="right"><span>8.28</span><button type="button" class="remove_btn"
-										aria-label="삭제 버튼"></button>
-								</div>
-							</li>
-							<li>
-								<div class="left">
-									<p>한지민</p>
-								</div>
-								<div class="right"><span>8.28</span><button type="button" class="remove_btn"
-										aria-label="삭제 버튼"></button>
-								</div>
-							</li>
-							<li>
-								<div class="left">
-									<p>한지민</p>
-								</div>
-								<div class="right"><span>8.28</span><button type="button" class="remove_btn"
-										aria-label="삭제 버튼"></button>
-								</div>
-							</li>
-							<li>
-								<div class="left">
-									<p>한지민</p>
-								</div>
-								<div class="right"><span>8.28</span><button type="button" class="remove_btn"
-										aria-label="삭제 버튼"></button>
+								<div class="right"><span>8.28</span><button type="button" class="remove_btn" aria-label="삭제 버튼"></button>
 								</div>
 							</li>
 						</ul>
 					</div>
-					<div class="swiper swiper1 body_right">
-						<div class="search_head">
-							<h5>BEST <span>인기정보</span></h5>
-							<div class="swiper_btn">
-								<div class="swiper-pagination"></div>
-								<div class="swiper-button-prev"></div>
-								<div class="swiper-button-next"></div>
+				</div> -->
+
+				<!-- ⭐ 2. 연관검색어 A타입-->
+				<!-- <div class="search_list">
+					<div class="search_head">
+						<h5>연관 검색어</h5>
+					</div>
+					<div class="search_body">
+						<ul class="related_search">
+							<li>
+								<div class="left related_link">
+									<p>쿠팡</p>
+									<a href="https://www.coupang.com/" class="link">https://www.coupang.com/</a>
+								</div>
+								<div class="right"><a href="https://www.coupang.com/" class="btn_link">바로가기</a>
+								</div>
+							</li>
+							<li>
+								<div class="left">
+									<p>쿠팡</p>
+								</div>
+							</li>
+							<li>
+								<div class="left">
+									<p>쿠팡 로켓배송</p>
+								</div>
+							</li>
+							<li>
+								<div class="left">
+									<p>쿠팡 플레이</p>
+								</div>
+							</li>
+							<li>
+								<div class="left">
+									<p>쿠팡 고객센터</p>
+								</div>
+							</li>
+							<li>
+								<div class="left">
+									<p>쿠팡 알바</p>
+								</div>
+							</li>
+							<li>
+								<div class="left">
+									<p>쿠팡 파트너스</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div> -->
+
+				<!-- ⭐ 3. 연관검색어 B타입-->
+				<!-- <div class="search_list">
+					<div class="search_head">
+						<h5>연관 검색어</h5>
+					</div>
+					<div class="search_body">
+						<ul class="related_search">
+							<li>
+								<div class="left">
+									<p>쿠팡</p>
+								</div>
+							</li>
+							<li>
+								<div class="left">
+									<p>쿠팡 로켓배송</p>
+								</div>
+							</li>
+							<li>
+								<div class="left">
+									<p>쿠팡 플레이</p>
+								</div>
+							</li>
+							<li>
+								<div class="left">
+									<p>쿠팡 고객센터</p>
+								</div>
+							</li>
+							<li>
+								<div class="left">
+									<p>쿠팡 알바</p>
+								</div>
+							</li>
+							<li>
+								<div class="left">
+									<p>쿠팡 파트너스</p>
+								</div>
+							</li>
+						</ul>
+						<div class="related_brand">
+							<div class="related_logo"><img src="../img/icon-coupang-001.png" alt="쿠팡로고" class="img"></div>
+							<h5>오늘은 몇%? 쿠팡 1일 특가</h5>
+							<p>이 가격 딱 오늘까지만!<br>
+								쿠팡 1일 특가로 역대급 득템하세요</p>
+							<a href="#">바로가기</a>
+						</div>
+					</div>
+				</div> -->
+
+				<!-- ⭐ 4. 연관검색어 C타입-->
+				<!-- <div class="search_list">
+					<div class="search_body">
+						<div class="body_left">
+							<div class="search_head">
+								<h5>인기 <span>검색어</span></h5>
+							</div>
+							<ul class="popular_search">
+								<li>
+									<div class="left">
+										<span class="rank">1</span>
+										<p>쿠팡</p>
+									</div>
+									<div class="right">
+										<span class="new">New</span>
+									</div>
+								</li>
+								<li>
+									<div class="left">
+										<span class="rank">2</span>
+										<p>쿠팡 로켓배송 쿠팡 로켓배송쿠팡 로켓배송쿠팡 로켓배송쿠팡 로켓배송</p>
+									</div>
+									<div class="right">
+										<span class="top">3</span>
+									</div>
+								</li>
+								<li>
+									<div class="left">
+										<span class="rank">3</span>
+										<p>쿠팡 플레이</p>
+									</div>
+									<div class="right">
+										<span class="maintenance"></span>
+									</div>
+								</li>
+								<li>
+									<div class="left">
+										<span class="rank">4</span>
+										<p>쿠팡</p>
+									</div>
+									<div class="right">
+										<span class="new">New</span>
+									</div>
+								</li>
+								<li>
+									<div class="left">
+										<span class="rank">5</span>
+										<p>쿠팡 로켓배송</p>
+									</div>
+									<div class="right">
+										<span class="top">3</span>
+									</div>
+								</li>
+								<li class="show">
+									<div class="left">
+										<span class="rank">1</span>
+										<p>쿠팡</p>
+									</div>
+									<div class="right">
+										<span class="new">New</span>
+									</div>
+								</li>
+								<li class="show">
+									<div class="left">
+										<span class="rank">2</span>
+										<p>쿠팡 로켓배송 쿠팡 로켓배송쿠팡 로켓배송쿠팡 로켓배송쿠팡 로켓배송</p>
+									</div>
+									<div class="right">
+										<span class="top">3</span>
+									</div>
+								</li>
+								<li class="show">
+									<div class="left">
+										<span class="rank">3</span>
+										<p>쿠팡 플레이</p>
+									</div>
+									<div class="right">
+										<span class="maintenance"></span>
+									</div>
+								</li>
+								<li class="show">
+									<div class="left">
+										<span class="rank">4</span>
+										<p>쿠팡</p>
+									</div>
+									<div class="right">
+										<span class="new">New</span>
+									</div>
+								</li>
+								<li class="show">
+									<div class="left">
+										<span class="rank">5</span>
+										<p>쿠팡 로켓배송</p>
+									</div>
+									<div class="right">
+										<span class="top">3</span>
+									</div>
+								</li>
+							</ul>
+							<button type="button" class="search_more_btn">더보기</button>
+							<div class="search_head hidden m_0">
+								<h5>최근 <span>검색어</span></h5>
+								<button type="button" class="total_remove_btn">전체삭제</button>
+							</div>
+							<ul class="recent_search hidden">
+								<li>
+									<div class="left">
+										<p>한지민한지민한지민한지민한지민한지민한지민한지민한지민한지민한지민</p>
+									</div>
+									<div class="right"><span>8.28</span><button type="button" class="remove_btn"
+											aria-label="삭제 버튼"></button>
+									</div>
+								</li>
+								<li>
+									<div class="left">
+										<p>한지민</p>
+									</div>
+									<div class="right"><span>8.28</span><button type="button" class="remove_btn"
+											aria-label="삭제 버튼"></button>
+									</div>
+								</li>
+								<li>
+									<div class="left">
+										<p>한지민</p>
+									</div>
+									<div class="right"><span>8.28</span><button type="button" class="remove_btn"
+											aria-label="삭제 버튼"></button>
+									</div>
+								</li>
+								<li>
+									<div class="left">
+										<p>한지민</p>
+									</div>
+									<div class="right"><span>8.28</span><button type="button" class="remove_btn"
+											aria-label="삭제 버튼"></button>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="swiper swiper1 body_right">
+							<div class="search_head">
+								<h5>BEST <span>인기정보</span></h5>
+								<div class="swiper_btn">
+									<div class="swiper-pagination"></div>
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>
+								</div>
+							</div>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<ul class="popular_info">
+										<li>
+											<div class="img_box"></div>
+											<div>
+												<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
+												<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
+												<span>2025-10-31</span>
+											</div>
+										</li>
+										<li>
+											<div class="img_box"></div>
+											<div>
+												<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
+												<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
+												<span>2025-10-31</span>
+											</div>
+										</li>
+										<li>
+											<div class="img_box"></div>
+											<div>
+												<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
+												<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
+												<span>2025-10-31</span>
+											</div>
+										</li>
+										<li>
+											<div class="img_box"></div>
+											<div>
+												<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
+												<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
+												<span>2025-10-31</span>
+											</div>
+										</li>
+										<li>
+											<div class="img_box"></div>
+											<div>
+												<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
+												<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
+												<span>2025-10-31</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="swiper-slide">
+									<ul class="popular_info">
+										<li>
+											<div class="img_box"></div>
+											<div>
+												<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
+												<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
+												<span>2025-10-31</span>
+											</div>
+										</li>
+										<li>
+											<div class="img_box"></div>
+											<div>
+												<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
+												<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
+												<span>2025-10-31</span>
+											</div>
+										</li>
+										<li>
+											<div class="img_box"></div>
+											<div>
+												<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
+												<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
+												<span>2025-10-31</span>
+											</div>
+										</li>
+										<li>
+											<div class="img_box"></div>
+											<div>
+												<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
+												<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
+												<span>2025-10-31</span>
+											</div>
+										</li>
+										<li>
+											<div class="img_box"></div>
+											<div>
+												<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
+												<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
+												<span>2025-10-31</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="swiper-slide">
+									<ul class="popular_info">
+										<li>
+											<div class="img_box"></div>
+											<div>
+												<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
+												<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
+												<span>2025-10-31</span>
+											</div>
+										</li>
+										<li>
+											<div class="img_box"></div>
+											<div>
+												<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
+												<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
+												<span>2025-10-31</span>
+											</div>
+										</li>
+										<li>
+											<div class="img_box"></div>
+											<div>
+												<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
+												<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
+												<span>2025-10-31</span>
+											</div>
+										</li>
+										<li>
+											<div class="img_box"></div>
+											<div>
+												<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
+												<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
+												<span>2025-10-31</span>
+											</div>
+										</li>
+										<li>
+											<div class="img_box"></div>
+											<div>
+												<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
+												<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
+												<span>2025-10-31</span>
+											</div>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<ul class="popular_info">
-									<li>
-										<div class="img_box"></div>
-										<div>
-											<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
-											<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
-											<span>2025-10-31</span>
-										</div>
-									</li>
-									<li>
-										<div class="img_box"></div>
-										<div>
-											<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
-											<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
-											<span>2025-10-31</span>
-										</div>
-									</li>
-									<li>
-										<div class="img_box"></div>
-										<div>
-											<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
-											<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
-											<span>2025-10-31</span>
-										</div>
-									</li>
-									<li>
-										<div class="img_box"></div>
-										<div>
-											<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
-											<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
-											<span>2025-10-31</span>
-										</div>
-									</li>
-									<li>
-										<div class="img_box"></div>
-										<div>
-											<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
-											<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
-											<span>2025-10-31</span>
-										</div>
-									</li>
-								</ul>
-							</div>
-							<div class="swiper-slide">
-								<ul class="popular_info">
-									<li>
-										<div class="img_box"></div>
-										<div>
-											<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
-											<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
-											<span>2025-10-31</span>
-										</div>
-									</li>
-									<li>
-										<div class="img_box"></div>
-										<div>
-											<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
-											<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
-											<span>2025-10-31</span>
-										</div>
-									</li>
-									<li>
-										<div class="img_box"></div>
-										<div>
-											<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
-											<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
-											<span>2025-10-31</span>
-										</div>
-									</li>
-									<li>
-										<div class="img_box"></div>
-										<div>
-											<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
-											<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
-											<span>2025-10-31</span>
-										</div>
-									</li>
-									<li>
-										<div class="img_box"></div>
-										<div>
-											<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
-											<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
-											<span>2025-10-31</span>
-										</div>
-									</li>
-								</ul>
-							</div>
-							<div class="swiper-slide">
-								<ul class="popular_info">
-									<li>
-										<div class="img_box"></div>
-										<div>
-											<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
-											<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
-											<span>2025-10-31</span>
-										</div>
-									</li>
-									<li>
-										<div class="img_box"></div>
-										<div>
-											<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
-											<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
-											<span>2025-10-31</span>
-										</div>
-									</li>
-									<li>
-										<div class="img_box"></div>
-										<div>
-											<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
-											<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
-											<span>2025-10-31</span>
-										</div>
-									</li>
-									<li>
-										<div class="img_box"></div>
-										<div>
-											<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
-											<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
-											<span>2025-10-31</span>
-										</div>
-									</li>
-									<li>
-										<div class="img_box"></div>
-										<div>
-											<h6>부모님 건강이상 신호 확인 가능 신호 확인 가능</h6>
-											<p>"부모님 건강 궁금하시죠?"…'명절 수체크' 질문 6가지 간단한 대화로 필수체크' 질문 6가지 간단한 대화로</p>
-											<span>2025-10-31</span>
-										</div>
-									</li>
-								</ul>
-							</div>
+					</div>
+				</div> -->
+
+				<!-- ⭐ 5. 연관검색어 D타입-->
+				<div class="search_list">
+					<div class="search_head">
+						<a href="#" class="link"><strong>스타일난다</strong> 홈페이지</a>
+						<span class="label">광고</span>
+					</div>
+					<div class="search_body">
+						<div class="brand_banner">
+							<img src="../img/search-pstatic.png" alt="배너" class="img">
+						</div>
+
+						<div class="brand_cont">
+							<h3 class="b_title">NEW 벨벳 립 틴트 플러쉬</h3>
+							<p class="b_sub_title">부드럽게 감싸는 벨벳 감촉 #버터벨벳틴트<br>
+								더욱 완벽해진 3CE 아이콘 단독 선런칭</p>
+							<ul>
+								<li>
+									<div class="sub_banner"><img src="../img/sub-01.png" alt="서브배너" class="img"></div>
+									<p>여자 썸머 디스트 여자 썸머 디스트</p>
+								</li>
+								<li>
+									<div class="sub_banner"><img src="../img/sub-01.png" alt="서브배너" class="img"></div>
+									<p>여자 썸머 디스트 여자 썸머 디스트</p>
+								</li>
+								<li>
+									<div class="sub_banner"><img src="../img/sub-01.png" alt="서브배너" class="img"></div>
+									<p>여자 썸머 디스트 여자 썸머 디스트</p>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
-
-
+			<div class="site_wrap">
+				<div class="site">
+					<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
+					<ul class="more_pop">
+						<li><button type="button" class="modify_btn">수정</button></li>
+						<li><button type="button" class="remove_btn">삭제</button></li>
+					</ul>
+					<a href="#">
+						<div class="img_box"><img src="../img/icon-naver.png" alt="네이버" class="img"></div>
+						<span class="title" title="네이버">네이버</span>
+					</a>
+				</div>
+				<div class="site">
+					<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
+					<ul class="more_pop">
+						<li><button type="button" class="modify_btn">수정</button></li>
+						<li><button type="button" class="remove_btn">삭제</button></li>
+					</ul>
+					<a href="#">
+						<div class="img_box"><img src="../img/icon-google.png" alt="" class="img"></div>
+						<span title="구글">구글</span>
+					</a>
+				</div>
+				<div class="site">
+					<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
+					<ul class="more_pop">
+						<li><button type="button" class="modify_btn">수정</button></li>
+						<li><button type="button" class="remove_btn">삭제</button></li>
+					</ul>
+					<a href="#">
+						<div class="img_box"><img src="../img/icon-daum.png" alt="다음" class="img"></div>
+						<span title="다음">다음</span>
+					</a>
+				</div>
+				<div class="site">
+					<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
+					<ul class="more_pop">
+						<li><button type="button" class="modify_btn">수정</button></li>
+						<li><button type="button" class="remove_btn">삭제</button></li>
+					</ul>
+					<a href="#">
+						<div class="img_box"><img src="../img/icon-youtobe.png" alt="유튜브" class="img"></div>
+						<span title="유튜브">유튜브</span>
+					</a>
+				</div>
+				<div class="site">
+					<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
+					<ul class="more_pop">
+						<li><button type="button" class="modify_btn">수정</button></li>
+						<li><button type="button" class="remove_btn">삭제</button></li>
+					</ul>
+					<a href="#">
+						<div class="img_box"><img src="../img/icon-insta.png" alt="인스타그램" class="img"></div>
+						<span title="인스타그램">인스타그램</span>
+					</a>
+				</div>
+				<div class="site">
+					<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
+					<ul class="more_pop">
+						<li><button type="button" class="modify_btn">수정</button></li>
+						<li><button type="button" class="remove_btn">삭제</button></li>
+					</ul>
+					<a href="#">
+						<div class="img_box"><img src="../img/icon-coupang.png" alt="쿠팡" class="img"></div>
+						<span title="쿠팡">쿠팡</span>
+					</a>
+				</div>
+				<div class="site">
+					<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
+					<ul class="more_pop">
+						<li><button type="button" class="modify_btn">수정</button></li>
+						<li><button type="button" class="remove_btn">삭제</button></li>
+					</ul>
+					<a href="#">
+						<div class="img_box"><img src="../img/icon-gmarket.png" alt="지마켓" class="img"></div>
+						<span title="지마켓">지마켓</span>
+					</a>
+				</div>
+				<div class="site">
+					<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
+					<ul class="more_pop">
+						<li><button type="button" class="modify_btn">수정</button></li>
+						<li><button type="button" class="remove_btn">삭제</button></li>
+					</ul>
+					<a href="#">
+						<div class="img_box"><img src="../img/icon-auction.png" alt="옥션" class="img"></div>
+						<span title="옥션">옥션</span>
+					</a>
+				</div>
+				<div class="site">
+					<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
+					<ul class="more_pop">
+						<li><button type="button" class="modify_btn">수정</button></li>
+						<li><button type="button" class="remove_btn">삭제</button></li>
+					</ul>
+					<a href="#">
+						<div class="img_box"><img src="../img/icon-11.png" alt="11번가" class="img"></div>
+						<span title="11번가">11번가</span>
+					</a>
+				</div>
+				<button type="button" aria-label="바로가기 추가" class="go"></button>
+			</div>
 		</div>
-		<div class="site_wrap">
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="naver">
-					<div class="img_box"><img src="../img/icon-naver.png" alt="네이버" class="img"></div>
-					<span class="title" title="네이버">네이버</span>
-				</a>
+
+		<div class="content_area">
+			<div class="news_grid">
+				<div class="card card1">
+					<div class="card_img"><img src="../img/img-01@3x.jpg" alt="뉴스기사이미지" class="img"></div>
+					<div class="media_wrap">
+						<div class="media_company">
+							<div class="media_logo"></div>뉴스1
+						</div>
+						<p class="title">장동혁, 13일 만에 민생 현장서
+							당무 재개…'29일 韓 제명 확정' 장동혁, 13일 만에 장동혁, 13일 만에</p>
+						<div class="info_wrap">
+							<span class="name">신현의 객원기자</span>
+							<span class="date">01월 28일 17:32</span>
+						</div>
+					</div>
+				</div>
+				<div class="card card1">
+					<div class="card_img"><img src="../img/img-04@3x.jpg" alt="뉴스기사이미지" class="img"></div>
+					<div class="media_wrap">
+						<div class="media_company">
+							<div class="media_logo"></div>국민일보
+						</div>
+						<p class="title">‘탈세 의혹’ 차은우, 국방부도<br>
+							손절… 국방홍보원 영상 삭제</p>
+						<div class="info_wrap">
+							<span class="name">김상기 기자</span>
+							<span class="date">01월 28일 17:32</span>
+						</div>
+					</div>
+				</div>
+				<div class="card card1">
+					<div class="card_img"><img src="../img/img-01@3x.jpg" alt="뉴스기사이미지" class="img"></div>
+					<div class="media_wrap">
+						<div class="media_company">
+							<div class="media_logo"></div>뉴스1
+						</div>
+						<p class="title">장동혁, 13일 만에 민생 현장서
+							당무 재개…'29일 韓 제명 확정' 장동혁, 13일 만에 장동혁, 13일 만에</p>
+						<div class="info_wrap">
+							<span class="name">신현의 객원기자</span>
+							<span class="date">01월 28일 17:32</span>
+						</div>
+					</div>
+				</div>
+				<div class="card card1">
+					<div class="card_img"><img src="../img/img-04@3x.jpg" alt="뉴스기사이미지" class="img"></div>
+					<div class="media_wrap">
+						<div class="media_company">
+							<div class="media_logo"></div>국민일보
+						</div>
+						<p class="title">‘탈세 의혹’ 차은우, 국방부도<br>
+							손절… 국방홍보원 영상 삭제</p>
+						<div class="info_wrap">
+							<span class="name">김상기 기자</span>
+							<span class="date">01월 28일 17:32</span>
+						</div>
+					</div>
+				</div>
+				<div class="card card2">
+					<div class="live">07.07(월) 12:30<button type="button" aria-label="리로드 버튼" class="reset_btn"></button></div>
+
+					<div class="weather_box">
+						<div class="weather_img"><img src="../img/ic-cloud-1@3x.png" alt="구름많음" class="img"></div>
+						<div class="inner">
+							<div class="temp">31.4<span>°C</span></div>
+							<div><span>체감온도</span>
+								<div>32.4°</div>
+							</div>
+						</div>
+						<p>어제보다 1°C 낮아요</p>
+					</div>
+
+					<div class="weather_group">
+						<div>
+							<span class="humi_text">습도</span>
+							<span>66%</span>
+						</div>
+						<div>
+							<span class="wind_text">바람</span>
+							<span>동 1.2<em>㎧</em></span>
+						</div>
+						<div class="text2">
+							<img src="../img/ico-point.svg" alt="포인트">
+							오늘<br>날씨퀴즈
+						</div>
+					</div>
+				</div>
+				<div class="card card1">
+					<div class="card_img"><img src="../img/img-04@3x.jpg" alt="뉴스기사이미지" class="img"></div>
+					<div class="media_wrap">
+						<div class="media_company">
+							<div class="media_logo"></div>국민일보
+						</div>
+						<p class="title">‘탈세 의혹’ 차은우, 국방부도<br>
+							손절… 국방홍보원 영상 삭제</p>
+						<div class="info_wrap">
+							<span class="name">김상기 기자</span>
+							<span class="date">01월 28일 17:32</span>
+						</div>
+					</div>
+				</div>
+				<div class="card card3">
+					<div class="card_img"><img src="../img/b-img-02@3x.jpg" alt="뉴스기사이미지" class="img"></div>
+					<div class="media_wrap">
+						<div class="media_company">
+							<div class="media_logo"></div> 뉴스1
+						</div>
+						<p class="title">코스닥 2조 넘게 쓸어 담은 기관… 바이오·로봇株<br>폭풍매수[핫종목]</p>
+						<div class="info_wrap">
+							<span class="name">신현의 객원기자</span>
+							<span class="date">01월 28일 17:32</span>
+						</div>
+					</div>
+				</div>
+				<div class="card card1">
+					<div class="card_img"><img src="../img/img-04@3x.jpg" alt="뉴스기사이미지" class="img"></div>
+					<div class="media_wrap">
+						<div class="media_company">
+							<div class="media_logo"></div>국민일보
+						</div>
+						<p class="title">‘탈세 의혹’ 차은우, 국방부도<br>
+							손절… 국방홍보원 영상 삭제</p>
+						<div class="info_wrap">
+							<span class="name">김상기 기자</span>
+							<span class="date">01월 28일 17:32</span>
+						</div>
+					</div>
+				</div>
+				<div class="card card1">
+					<div class="card_img"><img src="../img/img-04@3x.jpg" alt="뉴스기사이미지" class="img"></div>
+					<div class="media_wrap">
+						<div class="media_company">
+							<div class="media_logo"></div>국민일보
+						</div>
+						<p class="title">‘탈세 의혹’ 차은우, 국방부도<br>
+							손절… 국방홍보원 영상 삭제</p>
+						<div class="info_wrap">
+							<span class="name">김상기 기자</span>
+							<span class="date">01월 28일 17:32</span>
+						</div>
+					</div>
+				</div>
+				<div class="card card1">
+					<div class="card_img"><img src="../img/img-01@3x.jpg" alt="뉴스기사이미지" class="img"></div>
+					<div class="media_wrap">
+						<div class="media_company">
+							<div class="media_logo"></div>뉴스1
+						</div>
+						<p class="title">장동혁, 13일 만에 민생 현장서
+							당무 재개…'29일 韓 제명 확정' 장동혁, 13일 만에 장동혁, 13일 만에</p>
+						<div class="info_wrap">
+							<span class="name">신현의 객원기자</span>
+							<span class="date">01월 28일 17:32</span>
+						</div>
+					</div>
+				</div>
+				<div class="card card1">
+					<div class="card_img"><img src="../img/img-04@3x.jpg" alt="뉴스기사이미지" class="img"></div>
+					<div class="media_wrap">
+						<div class="media_company">
+							<div class="media_logo"></div>국민일보
+						</div>
+						<p class="title">‘탈세 의혹’ 차은우, 국방부도<br>
+							손절… 국방홍보원 영상 삭제</p>
+						<div class="info_wrap">
+							<span class="name">김상기 기자</span>
+							<span class="date">01월 28일 17:32</span>
+						</div>
+					</div>
+				</div>
+				<div class="card card1">
+					<div class="card_img"><img src="../img/img-01@3x.jpg" alt="뉴스기사이미지" class="img"></div>
+					<div class="media_wrap">
+						<div class="media_company">
+							<div class="media_logo"></div>뉴스1
+						</div>
+						<p class="title">장동혁, 13일 만에 민생 현장서
+							당무 재개…'29일 韓 제명 확정' 장동혁, 13일 만에 장동혁, 13일 만에</p>
+						<div class="info_wrap">
+							<span class="name">신현의 객원기자</span>
+							<span class="date">01월 28일 17:32</span>
+						</div>
+					</div>
+				</div>
+				<div class="card card1">
+					<div class="card_img"><img src="../img/img-04@3x.jpg" alt="뉴스기사이미지" class="img"></div>
+					<div class="media_wrap">
+						<div class="media_company">
+							<div class="media_logo"></div>국민일보
+						</div>
+						<p class="title">‘탈세 의혹’ 차은우, 국방부도<br>
+							손절… 국방홍보원 영상 삭제</p>
+						<div class="info_wrap">
+							<span class="name">김상기 기자</span>
+							<span class="date">01월 28일 17:32</span>
+						</div>
+					</div>
+				</div>
+				<div class="card card2">
+					<div class="live">07.07(월) 12:30<button type="button" aria-label="리로드 버튼" class="reset_btn"></button></div>
+
+					<div class="weather_box">
+						<div class="weather_img"><img src="../img/ic-cloud-1@3x.png" alt="구름많음" class="img"></div>
+						<div class="inner">
+							<div class="temp">31.4<span>°C</span></div>
+							<div><span>체감온도</span>
+								<div>32.4°</div>
+							</div>
+						</div>
+						<p>어제보다 1°C 낮아요</p>
+					</div>
+
+					<div class="weather_group">
+						<div>
+							<span class="humi_text">습도</span>
+							<span>66%</span>
+						</div>
+						<div>
+							<span class="wind_text">바람</span>
+							<span>동 1.2<em>㎧</em></span>
+						</div>
+						<div class="text2">
+							<img src="../img/ico-point.svg" alt="포인트">
+							오늘<br>날씨퀴즈
+						</div>
+					</div>
+				</div>
+				<div class="card card1">
+					<div class="card_img"><img src="../img/img-04@3x.jpg" alt="뉴스기사이미지" class="img"></div>
+					<div class="media_wrap">
+						<div class="media_company">
+							<div class="media_logo"></div>국민일보
+						</div>
+						<p class="title">‘탈세 의혹’ 차은우, 국방부도<br>
+							손절… 국방홍보원 영상 삭제</p>
+						<div class="info_wrap">
+							<span class="name">김상기 기자</span>
+							<span class="date">01월 28일 17:32</span>
+						</div>
+					</div>
+				</div>
+				<div class="card card3">
+					<div class="card_img"><img src="../img/b-img-02@3x.jpg" alt="뉴스기사이미지" class="img"></div>
+					<div class="media_wrap">
+						<div class="media_company">
+							<div class="media_logo"></div> 뉴스1
+						</div>
+						<p class="title">코스닥 2조 넘게 쓸어 담은 기관… 바이오·로봇株<br>폭풍매수[핫종목]</p>
+						<div class="info_wrap">
+							<span class="name">신현의 객원기자</span>
+							<span class="date">01월 28일 17:32</span>
+						</div>
+					</div>
+				</div>
+				<div class="card card1">
+					<div class="card_img"><img src="../img/img-04@3x.jpg" alt="뉴스기사이미지" class="img"></div>
+					<div class="media_wrap">
+						<div class="media_company">
+							<div class="media_logo"></div>국민일보
+						</div>
+						<p class="title">‘탈세 의혹’ 차은우, 국방부도<br>
+							손절… 국방홍보원 영상 삭제</p>
+						<div class="info_wrap">
+							<span class="name">김상기 기자</span>
+							<span class="date">01월 28일 17:32</span>
+						</div>
+					</div>
+				</div>
+				<div class="card card1">
+					<div class="card_img"><img src="../img/img-04@3x.jpg" alt="뉴스기사이미지" class="img"></div>
+					<div class="media_wrap">
+						<div class="media_company">
+							<div class="media_logo"></div>국민일보
+						</div>
+						<p class="title">‘탈세 의혹’ 차은우, 국방부도<br>
+							손절… 국방홍보원 영상 삭제</p>
+						<div class="info_wrap">
+							<span class="name">김상기 기자</span>
+							<span class="date">01월 28일 17:32</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="google">
-					<div class="img_box"><img src="../img/icon-google.png" alt="" class="img"></div>
-					<span title="구글">구글</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="google">
-					<div class="img_box"><img src="../img/icon-daum.png" alt="다음" class="img"></div>
-					<span title="다음">다음</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="youtobe">
-					<div class="img_box"><img src="../img/icon-youtobe.png" alt="유튜브" class="img"></div>
-					<span title="유튜브">유튜브</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="insta">
-					<div class="img_box"><img src="../img/icon-insta.png" alt="인스타그램" class="img"></div>
-					<span title="인스타그램">인스타그램</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="coupang">
-					<div class="img_box"><img src="../img/icon-coupang.png" alt="쿠팡" class="img"></div>
-					<span title="쿠팡">쿠팡</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="gmarket">
-					<div class="img_box"><img src="../img/icon-gmarket.png" alt="지마켓" class="img"></div>
-					<span title="지마켓">지마켓</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="auction">
-					<div class="img_box"><img src="../img/icon-auction.png" alt="옥션" class="img"></div>
-					<span title="옥션">옥션</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="store">
-					<div class="img_box"><img src="../img/icon-11.png" alt="11번가" class="img"></div>
-					<span title="11번가">11번가</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="naver">
-					<div class="img_box"><img src="../img/icon-naver.png" alt="네이버" class="img"></div>
-					<span class="title" title="네이버">네이버</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="google">
-					<div class="img_box"><img src="../img/icon-google.png" alt="" class="img"></div>
-					<span title="구글">구글</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="google">
-					<div class="img_box"><img src="../img/icon-daum.png" alt="다음" class="img"></div>
-					<span title="다음">다음</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="youtobe">
-					<div class="img_box"><img src="../img/icon-youtobe.png" alt="유튜브" class="img"></div>
-					<span title="유튜브">유튜브</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="insta">
-					<div class="img_box"><img src="../img/icon-insta.png" alt="인스타그램" class="img"></div>
-					<span title="인스타그램">인스타그램</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="coupang">
-					<div class="img_box"><img src="../img/icon-coupang.png" alt="쿠팡" class="img"></div>
-					<span title="쿠팡">쿠팡</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="gmarket">
-					<div class="img_box"><img src="../img/icon-gmarket.png" alt="지마켓" class="img"></div>
-					<span title="지마켓">지마켓</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="auction">
-					<div class="img_box"><img src="../img/icon-auction.png" alt="옥션" class="img"></div>
-					<span title="옥션">옥션</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="store">
-					<div class="img_box"><img src="../img/icon-11.png" alt="11번가" class="img"></div>
-					<span title="11번가">11번가</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="naver">
-					<div class="img_box"><img src="../img/icon-naver.png" alt="네이버" class="img"></div>
-					<span class="title" title="네이버">네이버</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="google">
-					<div class="img_box"><img src="../img/icon-google.png" alt="" class="img"></div>
-					<span title="구글">구글</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="google">
-					<div class="img_box"><img src="../img/icon-daum.png" alt="다음" class="img"></div>
-					<span title="다음">다음</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="youtobe">
-					<div class="img_box"><img src="../img/icon-youtobe.png" alt="유튜브" class="img"></div>
-					<span title="유튜브">유튜브</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="insta">
-					<div class="img_box"><img src="../img/icon-insta.png" alt="인스타그램" class="img"></div>
-					<span title="인스타그램">인스타그램</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="coupang">
-					<div class="img_box"><img src="../img/icon-coupang.png" alt="쿠팡" class="img"></div>
-					<span title="쿠팡">쿠팡</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="gmarket">
-					<div class="img_box"><img src="../img/icon-gmarket.png" alt="지마켓" class="img"></div>
-					<span title="지마켓">지마켓</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="auction">
-					<div class="img_box"><img src="../img/icon-auction.png" alt="옥션" class="img"></div>
-					<span title="옥션">옥션</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="store">
-					<div class="img_box"><img src="../img/icon-11.png" alt="11번가" class="img"></div>
-					<span title="11번가">11번가</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="naver">
-					<div class="img_box"><img src="../img/icon-naver.png" alt="네이버" class="img"></div>
-					<span class="title" title="네이버">네이버</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="google">
-					<div class="img_box"><img src="../img/icon-google.png" alt="" class="img"></div>
-					<span title="구글">구글</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="google">
-					<div class="img_box"><img src="../img/icon-daum.png" alt="다음" class="img"></div>
-					<span title="다음">다음</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="youtobe">
-					<div class="img_box"><img src="../img/icon-youtobe.png" alt="유튜브" class="img"></div>
-					<span title="유튜브">유튜브</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="insta">
-					<div class="img_box"><img src="../img/icon-insta.png" alt="인스타그램" class="img"></div>
-					<span title="인스타그램">인스타그램</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="coupang">
-					<div class="img_box"><img src="../img/icon-coupang.png" alt="쿠팡" class="img"></div>
-					<span title="쿠팡">쿠팡</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="gmarket">
-					<div class="img_box"><img src="../img/icon-gmarket.png" alt="지마켓" class="img"></div>
-					<span title="지마켓">지마켓</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="auction">
-					<div class="img_box"><img src="../img/icon-auction.png" alt="옥션" class="img"></div>
-					<span title="옥션">옥션</span>
-				</a>
-			</div>
-			<div class="site">
-				<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-				<ul class="more_pop">
-					<li><button type="button" class="modify_btn">수정</button></li>
-					<li><button type="button" class="remove_btn">삭제</button></li>
-				</ul>
-				<a href="#" class="store">
-					<div class="img_box"><img src="../img/icon-11.png" alt="11번가" class="img"></div>
-					<span title="11번가">11번가</span>
-				</a>
-			</div>
-			<button type="button" aria-label="바로가기 추가" class="go"></button>
 		</div>
-	</div>
+
+	</div><!-- wrap -->
 
 	<div class="modal_wrap modal_wrap1">
 		<div class="pop pop2">
@@ -974,13 +1025,13 @@
 					<ul class="list_wrap">
 						<li>
 							<button type="button" title="넷플릭스넷플릭스">
-								<span class="img_box"><img src="../img/logo-netflix-2.png" alt="넷플릭스" class="img"></span>
+								<span class="img_box"><img src="../img/1770708245.png" alt="넷플릭스" class="img"></span>
 								<span class="title">넷플릭스넷플릭스</span>
 							</button>
 						</li>
 						<li>
 							<button type="button" title="넷플릭스넷플릭스">
-								<span class="img_box"><img src="../img/logo-netflix-2.png" alt="넷플릭스" class="img"></span>
+								<span class="img_box"><img src="../img/icon-google.png" alt="넷플릭스" class="img"></span>
 								<span class="title">넷플릭스넷플릭스</span>
 							</button>
 						</li>
