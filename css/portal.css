@@ -1,9 +1,10 @@
 @charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 :root {
-  --font-family: "Pretendard";
+  --font-family: 'Pretendard';
   --black-color: #333333;
   --vh: 100%;
+  --bg-url: url('../img/img-bg-01.jpg');
 }
 
 /* font */
@@ -79,31 +80,373 @@ body {
 
 /**************************************/
 .wrap {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  min-width: 1200px;
-  padding: 15px 18px;
-  display: block;
-  background: url("../img/img-bg-01.jpg") no-repeat center/cover;
-  /* 구글 */
-  /* 네이버 */
-  /* 다음 */
-  /* 공통 */
+  min-height: 750px;
+  /* 스크롤 효과 */
 }
-.wrap::before {
+.wrap .main_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-url) no-repeat center/cover;
+  z-index: 1;
+}
+.wrap .main_bg::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
   z-index: 0;
 }
-.wrap > * {
+.wrap .header_mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 0;
+  background-color: #fff;
+  background: var(--bg-url) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0;
+  z-index: 90;
+  transition: opacity 0.4s ease;
+}
+.wrap .header_mask.active {
+  opacity: 1;
+  display: block;
+}
+.wrap .header_mask::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
+.wrap .search_wrapper {
+  position: fixed;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 100;
+}
+.wrap .content_area {
+  position: relative;
+  max-width: 1620px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  margin: 100vh auto 0;
+  margin-top: 71.5vh;
+  z-index: 50;
+}
+.wrap .content_area .news_grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 20px;
+  max-width: 1620px;
+  margin: 0 auto;
+  z-index: 200;
+}
+.wrap .content_area .card {
+  max-width: 300px;
+  height: 310px;
+  border-radius: 10px;
+  border: 1px solid #f6f7f9;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+}
+.wrap .content_area .card.card1 {
+  cursor: pointer;
+}
+.wrap .content_area .card.card1 .card_img {
+  height: 152px;
+  overflow: hidden;
+}
+.wrap .content_area .card.card1 .media_wrap {
+  padding: 15px 18px 13px 20px;
+}
+.wrap .content_area .card.card1 .media_wrap .media_company {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.24px;
+  color: #666;
+}
+.wrap .content_area .card.card1 .media_wrap .media_company .media_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 5px;
+}
+.wrap .content_area .card.card1 .media_wrap .media_company .media_logo img {
+  width: 80%;
+  height: auto;
+}
+.wrap .content_area .card.card1 .media_wrap .title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.4px;
+  color: #000;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.wrap .content_area .card.card1 .media_wrap .info_wrap {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  letter-spacing: -0.24px;
+  margin-top: 27px;
+}
+.wrap .content_area .card.card1 .media_wrap .info_wrap .name {
+  font-weight: 500;
+  color: #333;
+}
+.wrap .content_area .card.card1 .media_wrap .info_wrap .date {
+  font-weight: 300;
+  color: #c9c9c9;
+}
+.wrap .content_area .card.card2 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 310px;
+  background: url("../img/img-06@3x.jpg") no-repeat center/cover;
+}
+.wrap .content_area .card.card2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
+.wrap .content_area .card.card2 > * {
   position: relative;
   z-index: 1;
+}
+.wrap .content_area .card.card2 .live {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  color: #fff;
+  padding-top: 13px;
+  padding-right: 14px;
+}
+.wrap .content_area .card.card2 .live .reset_btn {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  background: url("../img/reset.svg") no-repeat center;
+  margin-left: 2px;
+}
+.wrap .content_area .card.card2 .weather_box {
+  flex: 1;
+  text-align: center;
+  margin-top: 16px;
+}
+.wrap .content_area .card.card2 .weather_box .weather_img {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+.wrap .content_area .card.card2 .weather_box .inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 8px;
+  font-size: 15px;
+  line-height: 1.2;
+  color: #fff;
+}
+.wrap .content_area .card.card2 .weather_box .inner .temp {
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: #fff;
+}
+.wrap .content_area .card.card2 .weather_box .inner .temp span {
+  position: relative;
+  top: -13px;
+  font-size: 31px;
+  font-weight: normal;
+  letter-spacing: -1.24px;
+  margin-left: 3px;
+}
+.wrap .content_area .card.card2 .weather_box p {
+  font-size: 19px;
+  color: #fff;
+  margin-top: 8px;
+}
+.wrap .content_area .card.card2 .weather_group {
+  display: flex;
+}
+.wrap .content_area .card.card2 .weather_group > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 33.3333%;
+  height: 49px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+.wrap .content_area .card.card2 .weather_group > div:nth-child(1) {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.wrap .content_area .card.card2 .weather_group > div:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 2px;
+  height: 31px;
+  background-color: rgba(204, 208, 216, 0.5);
+}
+.wrap .content_area .card.card2 .weather_group > div:nth-child(2) {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.wrap .content_area .card.card2 .weather_group > div:nth-child(3) {
+  position: relative;
+  font-weight: 600;
+  line-height: 1.42;
+  color: #fff;
+  background-color: rgba(0, 131, 253, 0.8);
+  cursor: pointer;
+}
+.wrap .content_area .card.card2 .weather_group > div:nth-child(3) img {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+.wrap .content_area .card.card2 .weather_group > div .humi_text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.wrap .content_area .card.card2 .weather_group > div .humi_text::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: url("../img/ico-humidity.svg") no-repeat center;
+  margin-right: 1px;
+}
+.wrap .content_area .card.card2 .weather_group > div .wind_text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.wrap .content_area .card.card2 .weather_group > div .wind_text::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: url("../img/ico-wind.svg") no-repeat center;
+  margin-right: 1px;
+}
+.wrap .content_area .card.card2 .weather_group > div em {
+  font-size: 10px;
+}
+.wrap .content_area .card.card3 {
+  position: relative;
+  max-width: 620px;
+  grid-column: span 2;
+}
+.wrap .content_area .card.card3 .card_img {
+  position: absolute;
+}
+.wrap .content_area .card.card3 .card_img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.09) 67%);
+  z-index: 1;
+}
+.wrap .content_area .card.card3 .media_wrap {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 15px 18px 13px 20px;
+}
+.wrap .content_area .card.card3 .media_wrap .media_company {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.24px;
+  color: #ffffff;
+}
+.wrap .content_area .card.card3 .media_wrap .media_company .media_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 5px;
+}
+.wrap .content_area .card.card3 .media_wrap .media_company .media_logo img {
+  width: 80%;
+  height: auto;
+}
+.wrap .content_area .card.card3 .media_wrap .title {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: -0.6px;
+  color: #ffffff;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: 7px;
+}
+.wrap .content_area .card.card3 .media_wrap .info_wrap {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  letter-spacing: -0.24px;
+  margin-top: 7px;
+}
+.wrap .content_area .card.card3 .media_wrap .info_wrap .name {
+  font-weight: 500;
+  color: #ffffff;
+}
+.wrap .content_area .card.card3 .media_wrap .info_wrap .date {
+  font-weight: 300;
+  color: #c9c9c9;
+}
+.wrap {
+  /* 구글 */
 }
 .wrap.google .box > a.google {
   display: flex;
@@ -271,6 +614,9 @@ body {
 .wrap.google .search_list .search_head h5 {
   color: #4285f4;
 }
+.wrap {
+  /* 네이버 */
+}
 .wrap.naver .box > a.naver {
   display: flex;
 }
@@ -385,6 +731,9 @@ body {
 }
 .wrap.naver .search_list .search_head h5 {
   color: #03cf5d;
+}
+.wrap {
+  /* 다음 */
 }
 .wrap.daum .box > a.daum {
   display: flex;
@@ -511,8 +860,13 @@ body {
 .wrap.daum .search_list .search_head h5 {
   color: #273552;
 }
+.wrap {
+  /* 공통 */
+}
 .wrap .box {
-  position: relative;
+  position: fixed;
+  top: 15px;
+  right: 18px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -764,6 +1118,33 @@ body {
   padding: 50px 22px 22px;
   z-index: 997;
 }
+.wrap .search_list .show {
+  display: none;
+}
+.wrap .search_list .search_more_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #333;
+  border-radius: 20px;
+  background-color: #f1f3f4;
+  margin-bottom: 22px;
+}
+.wrap .search_list .search_more_btn::after {
+  content: "";
+  width: 10px;
+  height: 6px;
+  transform: rotate(180deg);
+  background: url("../img/icon-cursor-01.svg") no-repeat center;
+  margin-left: 8px;
+}
+.wrap .search_list .search_more_btn.active::after {
+  transform: rotate(0deg);
+}
 .wrap .search_list .search_head {
   display: flex;
   justify-content: space-between;
@@ -776,6 +1157,27 @@ body {
 .wrap .search_list .search_head h5 {
   font-size: 16px;
   font-weight: 600;
+}
+.wrap .search_list .search_head .link {
+  font-size: 22px;
+  font-weight: normal;
+  color: #4285f4;
+  margin-top: 3px;
+}
+.wrap .search_list .search_head .link strong {
+  font-weight: 600;
+}
+.wrap .search_list .search_head .label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 20px;
+  font-size: 12px;
+  color: #a9a9a9;
+  border-radius: 20px;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
 }
 .wrap .search_list .search_head .total_remove_btn {
   font-size: 16px;
@@ -1102,6 +1504,64 @@ body {
 .wrap .search_list .related_brand a:hover {
   filter: brightness(1.1);
 }
+.wrap .search_list .brand_banner {
+  width: 253px;
+  height: 253px;
+  margin-top: 17px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.wrap .search_list .brand_cont {
+  flex: 1;
+  margin-left: 22px;
+  margin-bottom: 20px;
+}
+.wrap .search_list .brand_cont .b_title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #0c43b7;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.wrap .search_list .brand_cont .b_sub_title {
+  max-height: 90px;
+  height: 100%;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.38;
+  margin-top: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  cursor: pointer;
+}
+.wrap .search_list .brand_cont ul {
+  display: flex;
+  column-gap: 10px;
+  margin-top: 10px;
+}
+.wrap .search_list .brand_cont ul li {
+  flex: calc(33.333% - 10px) 0 0;
+  display: block;
+}
+.wrap .search_list .brand_cont ul li .sub_banner {
+  width: 120px;
+  height: 76px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.wrap .search_list .brand_cont ul li p {
+  font-size: 14px;
+  color: #333;
+  margin: 10px 8px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .wrap .site_wrap {
   position: relative;
   display: grid;
@@ -1110,11 +1570,16 @@ body {
   justify-content: center;
   grid-gap: 30px;
   row-gap: 20px;
-  max-width: 1000px;
-  max-height: 310px;
   margin: auto;
-  padding: 10px 0;
-  overflow-y: auto;
+  padding: 10px 0 20px;
+  height: 113px;
+  opacity: 1;
+  overflow: hidden;
+  transition: height 0.4s ease, opacity 0.3s ease;
+}
+.wrap .site_wrap.hide {
+  height: 0;
+  opacity: 0;
 }
 .wrap .site_wrap::-webkit-scrollbar-thumb {
   border-radius: 20px;
@@ -1136,6 +1601,7 @@ body {
   border-radius: 50%;
   background-color: #f9fcff;
   padding: 9px 5px;
+  z-index: 2;
 }
 .wrap .site_wrap .more_btn.active {
   display: block;
@@ -1182,10 +1648,9 @@ body {
   width: 60px;
   height: 60px;
   border-radius: 18px;
-  border: 1px solid #e1e1e1;
   background-color: rgba(248, 248, 248, 0.8);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
-  padding: 9px;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
 }
 .wrap .site_wrap a span {
   width: 61px;
@@ -1384,15 +1849,17 @@ body {
   width: 60px;
   height: 60px;
   border-radius: 18px;
-  padding: 10px;
+  border: 1px solid #efefef;
   background-color: #efefef;
+  overflow: hidden;
+  margin-top: 5px;
 }
 .modal_wrap .pop .pop_body .box .list_wrap li button .title {
   max-width: 100%;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin-top: 9px;
+  margin-top: 4px;
   padding: 0 5px;
 }
 .modal_wrap .pop .pop_body .box .list_wrap li button:hover {
