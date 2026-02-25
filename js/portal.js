@@ -117,3 +117,59 @@ const swiper1 = new Swiper('.swiper1.swiper', {
 		type: "fraction",
 	},
 });
+
+/* 더보기 버튼 */
+$('.search_more_btn').click(function () {
+	$(this).toggleClass('active');
+
+	if ($(this).hasClass('active')) {
+		$(this).text('접기');
+		$('.show').css('display', 'flex');
+		$('.hidden').css('display', 'none');
+	} else {
+		$(this).text('더보기');
+		$('.show').css('display', 'none');
+		$('.search_head.hidden').css('display', 'flex');
+		$('.recent_search.hidden').css('display', 'block');
+	}
+});
+
+/* 스크롤 효과 */
+const searchWrapper = document.querySelector('.search_wrapper');
+const logo = document.getElementById('logo');
+const headerMask = document.querySelector('.header_mask');
+const contentArea = document.querySelector('.content_area');
+const siteWrap = document.querySelector('.site_wrap');
+
+window.addEventListener('scroll', () => {
+	const scrollY = window.scrollY;
+	const vh = window.innerHeight;
+	const threshold = contentArea.offsetTop;
+
+	let progress = Math.min(scrollY / threshold, 1);
+
+	const startTop = vh * 0.28;
+	const endTop = -40;
+	const currentTop = startTop - (startTop - endTop) * progress;
+	searchWrapper.style.top = `${currentTop}px`;
+
+	searchWrapper.style.transform = `translate(-50%, -50%)`;
+
+	logo.style.opacity = 1 - progress;
+
+	const searchRect = searchWrapper.getBoundingClientRect();
+	headerMask.style.height = `${searchRect.bottom}px`;
+
+	if (scrollY === 0) {
+		headerMask.classList.remove('active');
+		siteWrap.classList.remove('hide');
+	}
+	else if (scrollY > vh - 700) {
+		headerMask.classList.add('active');
+		siteWrap.classList.add('hide');
+	}
+	else {
+		headerMask.classList.remove('active');
+		siteWrap.classList.remove('hide');
+	}
+});
