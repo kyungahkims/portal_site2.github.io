@@ -1877,7 +1877,6 @@ body {
   opacity: 1;
   transition: height 0.4s ease, opacity 0.3s ease;
   margin: auto;
-  overflow: hidden;
 }
 .wrap .swiper_group.hide {
   height: 0;
