@@ -141,19 +141,17 @@ const headerMask = document.querySelector('.header_mask');
 const contentArea = document.querySelector('.content_area');
 const siteGroup = document.querySelector('.swiper_group');
 
-window.addEventListener('scroll', () => {
+function updateSearchWrapper() {
 	const scrollY = window.scrollY;
 	const vh = window.innerHeight;
 	const threshold = contentArea.offsetTop;
 
-	let progress = Math.min(scrollY / threshold, 1);
+	const progress = Math.min(scrollY / threshold, 1);
 
-	const startTop = vh * 0.28;
-	const endTop = -40;
+	const startTop = -50;
+	const endTop = -240;
 	const currentTop = startTop - (startTop - endTop) * progress;
 	searchWrapper.style.top = `${currentTop}px`;
-
-	searchWrapper.style.transform = `translate(-50%, -50%)`;
 
 	logo.style.opacity = 1 - progress;
 
@@ -161,16 +159,19 @@ window.addEventListener('scroll', () => {
 	headerMask.style.height = `${searchRect.bottom}px`;
 
 	if (scrollY === 0) {
-		headerMask.classList.remove('active');
 		siteGroup.classList.remove('hide');
+		headerMask.classList.remove('active');
 	} else if (scrollY > vh - 700) {
-		headerMask.classList.add('active');
 		siteGroup.classList.add('hide');
+		headerMask.classList.add('active');
 	} else {
-		headerMask.classList.remove('active');
 		siteGroup.classList.remove('hide');
+		headerMask.classList.remove('active');
 	}
-});
+}
+
+window.addEventListener('load', updateSearchWrapper);
+window.addEventListener('scroll', updateSearchWrapper);
 
 /* 즐겨찾기 리스트 */
 const swiper0 = new Swiper('.swiper_group > .swiper', {
