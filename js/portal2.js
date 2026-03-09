@@ -184,7 +184,19 @@ const swiper0 = new Swiper('.swiper_group > .swiper', {
 	},
 	on: {
 		init: function () {
-			if (this.slides.length <= 1) {
+
+			const slideCount = this.slides.length;
+
+			if (slideCount === 1) {
+				const slide = this.slides[0];
+				const siteCount = slide.querySelectorAll('.site').length;
+
+				if (siteCount < 12) {
+					slide.classList.add('center');
+				} else {
+					slide.classList.remove('center');
+				}
+
 				this.navigation.nextEl.style.display = 'none';
 				this.navigation.prevEl.style.display = 'none';
 				this.destroy(true, true);
