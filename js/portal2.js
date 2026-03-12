@@ -161,7 +161,7 @@ function updateSearchWrapper() {
 	if (scrollY === 0) {
 		siteGroup.classList.remove('hide');
 		headerMask.classList.remove('active');
-	} else if (scrollY > vh - 700) {
+	} else if (scrollY > vh - 750) {
 		siteGroup.classList.add('hide');
 		headerMask.classList.add('active');
 	} else {
