@@ -2321,20 +2321,20 @@ body {
   padding: 27px 42px 20px 40px;
   overflow: hidden;
 }
-.modal_wrap .pop.pop3 .pop_body .right h5 {
+.modal_wrap .pop.pop3 .pop_body .right h4 {
   display: flex;
   align-items: center;
   font-size: 20px;
   font-weight: bold;
 }
-.modal_wrap .pop.pop3 .pop_body .right h5::before {
+.modal_wrap .pop.pop3 .pop_body .right h4::before {
   content: "";
   width: 2px;
   height: 16px;
   background-color: #4285f4;
   margin-right: 9px;
 }
-.modal_wrap .pop.pop3 .pop_body .right h5 span {
+.modal_wrap .pop.pop3 .pop_body .right h4 span {
   font-size: 12px;
   font-weight: normal;
 }
@@ -2509,7 +2509,7 @@ body {
 .modal_wrap .pop.pop3 .pop_body .right .file_wrap .file_add {
   margin-top: 2px;
 }
-.modal_wrap .pop.pop3 .pop_body .right .file_wrap .file_add h6 {
+.modal_wrap .pop.pop3 .pop_body .right .file_wrap .file_add h5 {
   font-size: 16px;
   font-weight: 600;
   letter-spacing: -0.32px;
