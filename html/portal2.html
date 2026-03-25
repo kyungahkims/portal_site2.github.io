@@ -812,7 +812,7 @@
 					<li><button type="button" class="toggle_btn active">연예</button></li>
 					<li><button type="button" class="toggle_btn active">스포츠</button></li>
 					<li><button type="button" class="toggle_btn active">경제</button></li>
-					<li><button type="button" class="toggle_btn active">생활</button></li>
+					<!-- <li><button type="button" class="toggle_btn active">생활</button></li>
 					<li><button type="button" class="toggle_btn active">국제</button></li>
 					<li><button type="button" class="toggle_btn active">금융</button></li>
 					<li><button type="button" class="toggle_btn active">산업</button></li>
@@ -822,7 +822,7 @@
 					<li><button type="button" class="toggle_btn active">오피니언</button></li>
 					<li><button type="button" class="toggle_btn active">피플</button></li>
 					<li><button type="button" class="toggle_btn active">수도권</button></li>
-					<li><button type="button" class="toggle_btn active">지방</button></li>
+					<li><button type="button" class="toggle_btn active">지방</button></li> -->
 				</ul>
 				<button type="button" class="save_btn">저장</button>
 			</div>
@@ -1196,7 +1196,7 @@
 	<div class="modal_wrap modal_wrap3">
 		<div class="pop pop3">
 			<div class="pop_header">
-				<h3>설정화면</h3>
+				<h3>설정</h3>
 				<button type="button" aria-label="닫기 버튼" class="close_btn"></button>
 			</div>
 			<div class="pop_body">
@@ -1209,12 +1209,35 @@
 				<div class="right">
 					<div class="tabcontent">
 						<h5>테마</h5>
+						<div class="btn_tabs">
+							<ul class="scroll_x">
+								<li><button type="button" class="active">전체</button></li>
+								<li><button type="button">여행</button></li>
+								<li><button type="button">자연</button></li>
+								<li><button type="button">동물</button></li>
+								<li><button type="button">우주</button></li>
+								<li><button type="button">건축</button></li>
+								<li><button type="button">도시</button></li>
+								<li><button type="button">예술</button></li>
+								<li><button type="button">애니</button></li>
+								<li><button type="button">영화</button></li>
+								<li><button type="button">인물</button></li>
+								<li><button type="button">예술</button></li>
+								<li><button type="button">추가1</button></li>
+								<li><button type="button">추가1</button></li>
+								<li><button type="button">추가2</button></li>
+							</ul>
+						</div>
 						<div class="box1">
 							<ul class="list_wrap">
 								<li>
 									<label class="bg_option">
 										<input type="radio" name="image" value="">
-										<span>배경없음</span>
+										<span class="random">
+											<strong>랜던테마</strong>
+											<span class="cont">접속할 때마다 선택한 카테고리 내의<br>
+												배경이 무작위로 적용됩니다.</span>
+										</span>
 									</label>
 								</li>
 								<li>
@@ -1311,25 +1334,48 @@
 									<label class="bg_option">
 										<input type="radio" name="image" value="../img/img-001.png">
 										<img src="../img/img-bg-01.jpg" alt="배경이미지" class="img">
+									</label>
+								</li>
+								<li>
+									<label class="bg_option">
+										<input type="radio" name="image" value="" disabled>
+										<span class="disabled"></span>
+									</label>
+								</li>
+								<li>
+									<label class="bg_option">
+										<input type="radio" name="image" value="" disabled>
+										<span class="disabled"></span>
+									</label>
+								</li>
+								<li>
+									<label class="bg_option">
+										<input type="radio" name="image" value="" disabled>
+										<span class="disabled"></span>
 									</label>
 								</li>
 							</ul>
 						</div>
 						<div class="file_wrap">
-							<div class="file_img_wrap">
-								<div class="file_img">
-									<div class="img_box"><img src="../img/img-bg-01.jpg" alt="배경이미지"></div>
-								</div>
-								<div class="file_name">
-									<h6>현재 선택된 이미지</h6>
-									<p>파일명123457891011.jpg</p>
-								</div>
-							</div>
+							<label class="bg_option">
+								<input type="radio" name="image" value="" checked>
+								<span class="empty">배경없음</span>
+							</label>
 							<div class="file_add_wrap">
 								<div class="file_add">
 									<h6>내 이미지 불러오기</h6>
 									<label for="file-input">이미지 파일 불러오기</label>
 									<input type="file" id="file-input" accept="image/*">
+								</div>
+							</div>
+							<div class="file_img_wrap">
+								<div class="file_img">
+									<div class="img_box"><img src="../img/img-bg-01.jpg" alt="배경이미지"></div>
+								</div>
+								<div class="file_name">
+									<!-- <h6>불러온 이미지가 없습니다.</h6> -->
+									<h6>현재 불러온 이미지</h6>
+									<p>파일명123457891011.jpg</p>
 								</div>
 							</div>
 						</div>
