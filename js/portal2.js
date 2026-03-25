@@ -222,3 +222,48 @@ buttons.forEach(button => {
 		this.classList.toggle('active');
 	});
 });
+
+/* 스크롤 드래그 */
+const wraps = document.querySelectorAll('.scroll_x');
+
+wraps.forEach((wrap) => {
+	let isDown = false;
+	let startX;
+	let scrollLeft;
+
+	wrap.addEventListener('mousedown', (e) => {
+		isDown = true;
+		wrap.classList.add('dragging');
+		startX = e.pageX - wrap.offsetLeft;
+		scrollLeft = wrap.scrollLeft;
+	});
+
+	wrap.addEventListener('mouseleave', () => {
+		isDown = false;
+		wrap.classList.remove('dragging');
+	});
+
+	wrap.addEventListener('mouseup', () => {
+		isDown = false;
+		wrap.classList.remove('dragging');
+	});
+
+	wrap.addEventListener('mousemove', (e) => {
+		if (!isDown) return;
+		e.preventDefault();
+		const x = e.pageX - wrap.offsetLeft;
+		const walk = (x - startX) * 1;
+		wrap.scrollLeft = scrollLeft - walk;
+	});
+});
+
+/* 테마 버튼 */
+const temaButtons = document.querySelectorAll('.btn_tabs button');
+
+temaButtons.forEach(btn => {
+	btn.addEventListener('click', () => {
+		temaButtons.forEach(b => b.classList.remove('active'));
+
+		btn.classList.add('active');
+	});
+});
