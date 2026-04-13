@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Masonry + imagesLoaded</title>
+
+<style>
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: #f5f5f5;
+  }
+
+  .outer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .masonry-wrap {
+    width: 1230px;
+  }
+
+  .card {
+    width: 300px;
+    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .card.wide {
+    width: 920px;
+  }
+
+  .card img {
+    width: 100%;
+    display: block;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="outer">
+  <div class="masonry-wrap">
+    <div class="card wide"><img src="https://picsum.photos/920/300"></div>
+    <div class="card"><img src="https://picsum.photos/300/200"></div>
+    <div class="card"><img src="https://picsum.photos/300/250"></div>
+    <div class="card"><img src="https://picsum.photos/300/180"></div>
+    <div class="card"><img src="https://picsum.photos/300/220"></div>
+    <div class="card"><img src="https://picsum.photos/300/260"></div>
+    <div class="card"><img src="https://picsum.photos/300/210"></div>
+  </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- imagesLoaded -->
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+<!-- Masonry -->
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+<script>
+  var $grid = $('.masonry-wrap');
+
+  // 🔥 이미지 로딩 완료 후 masonry 실행
+  $grid.imagesLoaded(function () {
+    $grid.masonry({
+      itemSelector: '.card',
+      columnWidth: 300,
+      gutter: 10,
+      fitWidth: true
+    });
+  });
+
+  // 🔥 이미지 하나씩 로딩될 때마다 다시 정렬 (더 안정적)
+  $grid.imagesLoaded().progress(function () {
+    $grid.masonry('layout');
+  });
+</script>
+
+</body>
+</html>
