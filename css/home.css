@@ -62,7 +62,7 @@
   position: relative;
   max-width: 1562px;
   border-radius: 10px 10px 0 0;
-  background-color: rgba(245, 245, 245, 0.5);
+  background-color: rgba(143, 143, 143, 0.2);
   padding: 37px 11px 20px;
   margin: 100vh auto 0;
   margin-top: 67.5vh;
@@ -1454,13 +1454,38 @@
 .wrap .swiper-slide .site:hover .more_btn {
   display: block;
 }
+.wrap .swiper-slide .point {
+  position: absolute;
+  top: -6px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 14px;
+  font-size: 8px;
+  font-weight: 600;
+  color: #381c1e;
+  border-radius: 20px;
+  border: 1px solid #381c1e;
+  background-color: #f7e30a;
+  z-index: 2;
+}
 .wrap .swiper-slide .label {
   position: absolute;
   top: -6px;
   right: 0;
-  width: 22px;
-  height: 17px;
-  background: url("../img/icon-ad.svg") no-repeat center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 14px;
+  font-size: 8px;
+  font-weight: 500;
+  color: #999;
+  border-radius: 20px;
+  border: 1px solid #999;
+  background-color: #fff;
   z-index: 2;
 }
 .wrap .swiper-slide .more_btn {
