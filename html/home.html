@@ -641,6 +641,7 @@
 								</a>
 							</div>
 							<div class="site">
+								<span class="point">1P</span>
 								<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
 								<ul class="more_pop">
 									<li><button type="button" class="modify_btn">수정</button></li>
@@ -663,14 +664,14 @@
 								</a>
 							</div>
 							<!-- <div class="site">
-								<span class="label"></span>
+								<span class="label">AD</span>
 								<a href="#">
 									<div class="img_box"><img src="../img/icon-musinsa.png" alt="무신사" class="img"></div>
 									<span title="무신사">무신사</span>
 								</a>
 							</div> -->
 							<div class="site">
-								<span class="label"></span>
+								<span class="label">AD</span>
 								<a href="#">
 									<div class="img_box fade">
 										<img src="../img/icon-musinsa.png" alt="무신사" class="img active">
@@ -803,14 +804,14 @@
 								</a>
 							</div>
 							<!-- <div class="site">
-								<span class="label"></span>
+								<span class="label">AD</span>
 								<a href="#">
 									<div class="img_box"><img src="../img/icon-musinsa.png" alt="무신사" class="img"></div>
 									<span title="무신사">무신사</span>
 								</a>
 							</div> -->
 							<div class="site">
-								<span class="label"></span>
+								<span class="label">AD</span>
 								<a href="#">
 									<div class="img_box fade">
 										<img src="../img/icon-musinsa.png" alt="무신사" class="img active">
@@ -1264,9 +1265,15 @@
 										<input type="radio" name="image" value="">
 										<span class="random">
 											<strong>랜던테마</strong>
-											<span class="cont">접속할 때마다 선택한 카테고리 내의<br>
-												배경이 무작위로 적용됩니다.</span>
+											<button type="button" aria-label="툴팁" class="tooltip_btn"></button>
+											<span class="tooltip">접속할 때마다 선택한 카테고리 내의<br>배경이 무작위로 적용됩니다.</span>
 										</span>
+									</label>
+								</li>
+								<li>
+									<label class="bg_option">
+										<input type="radio" name="image" value="">
+										<span class="empty">배경없음</span>
 									</label>
 								</li>
 								<li>
@@ -1386,17 +1393,6 @@
 							</ul>
 						</div>
 						<div class="file_wrap">
-							<label class="bg_option">
-								<input type="radio" name="image" value="" checked>
-								<span class="empty">배경없음</span>
-							</label>
-							<div class="file_add_wrap">
-								<div class="file_add">
-									<h5>내 이미지 불러오기</h5>
-									<label for="file-input">이미지 파일 불러오기</label>
-									<input type="file" id="file-input" accept="image/*">
-								</div>
-							</div>
 							<div class="file_img_wrap">
 								<div class="file_img">
 									<div class="img_box"><img src="../img/img-bg-01.jpg" alt="배경이미지"></div>
@@ -1405,6 +1401,13 @@
 									<!-- <h6>불러온 이미지가 없습니다.</h6> -->
 									<h6>현재 불러온 이미지</h6>
 									<p>파일명123457891011.jpg</p>
+								</div>
+							</div>
+							<div class="file_add_wrap">
+								<div class="file_add">
+									<h5>내 이미지 불러오기</h5>
+									<label for="file-input">이미지 파일 불러오기</label>
+									<input type="file" id="file-input" accept="image/*">
 								</div>
 							</div>
 						</div>
