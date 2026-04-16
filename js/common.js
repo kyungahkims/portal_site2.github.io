@@ -1,3 +1,26 @@
+/* 스크롤 탑 버튼 */
+function onScroll() {
+	const scrollTop = window.scrollY || document.documentElement.scrollTop;
+	const btTop = document.querySelector(".bt_top");
+
+	if (scrollTop > 10) {
+		btTop.classList.add("show");
+	} else {
+		btTop.classList.remove("show");
+	}
+}
+
+function onTopClick() {
+	window.scrollTo({
+		top: 0,
+		behavior: "smooth"
+	});
+}
+
+window.addEventListener("scroll", onScroll);
+onScroll();
+document.querySelector(".bt_top").addEventListener("click", onTopClick);
+
 /* nav */
 const navLinks = document.querySelectorAll('.nav_wrap a');
 
