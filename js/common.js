@@ -196,6 +196,7 @@ const logo = document.getElementById('logo');
 const headerMask = document.querySelector('.header_mask');
 const contentArea = document.querySelector('.content_area');
 const siteGroup = document.querySelector('.swiper_group');
+const mainBg = document.querySelector('.main_bg');
 
 function updateSearchWrapper() {
 	const scrollY = window.scrollY;
@@ -213,6 +214,12 @@ function updateSearchWrapper() {
 
 	const searchRect = searchWrapper.getBoundingClientRect();
 	headerMask.style.height = `${searchRect.bottom}px`;
+
+	const ratio = Math.min(scrollY / threshold, 1);
+	const currentOpacity = 0.2 + (0.2 * ratio);
+
+	mainBg.style.setProperty('--bg-opacity', currentOpacity);
+	headerMask.style.setProperty('--bg-opacity', currentOpacity);
 
 	if (scrollY === 0) {
 		siteGroup.classList.remove('hide');

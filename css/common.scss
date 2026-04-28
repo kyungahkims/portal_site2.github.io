@@ -1494,7 +1494,8 @@ body {
 						.file_name {
 							margin-top: 2px;
 
-							h6 {
+							h5,
+							H6 {
 								font-size: 14px;
 								font-weight: 600;
 								letter-spacing: -0.28px;
@@ -1713,8 +1714,8 @@ body {
 	position: fixed;
 	width: 60px;
 	height: 60px;
-	bottom: 40px;
-	right: 40px;
+	bottom: 30px;
+	right: 5%;
 	opacity: 0;
 	background: url('../img/btn-up-on.svg') no-repeat center;
 	transform: translateY(30px) scale(0.6);
@@ -1747,5 +1748,48 @@ body {
 	100% {
 		opacity: 1;
 		transform: translateY(0) scale(1);
+	}
+}
+
+/* coupang_alram_btn */
+.coupang_alram_btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	width: 80px;
+	height: 80px;
+	bottom: 80px;
+	right: 0;
+	border-radius: 100px 0 0 100px;
+	background-color: rgba(245, 245, 245, 0.5);
+	z-index: 998;
+
+	&::before {
+		content: "";
+		width: 44px;
+		height: 44px;
+		background: url('../img/main-alram-001@3x.png') no-repeat center/contain;
+		margin-left: 5px;
+	}
+
+	span {
+		position: absolute;
+		top: 15px;
+		right: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 20px;
+		height: 20px;
+		font-size: 14px;
+		font-weight: 500;
+		color: #fff;
+		border-radius: 50%;
+		background-color: #ff0000;
+
+		&.none {
+			background: url('../img/icon-plus3.svg') no-repeat center;
+		}
 	}
 }
