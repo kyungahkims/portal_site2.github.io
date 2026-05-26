@@ -24,12 +24,6 @@
 				<a href="#">숏픽</a>
 			</nav>
 			<div class="box">
-				<a href="#" class="mail google">Gmail</a>
-				<a href="#" class="drive google">드라이브</a>
-				<a href="#" class="mail naver">메일</a>
-				<a href="#" class="drive naver">네이버쇼핑</a>
-				<a href="#" class="mail daum">메일</a>
-				<a href="#" class="drive daum">다음쇼핑</a>
 				<button type="button" class="more_btn" aria-label="더보기 버튼"></button>
 				<button type="button" class="setting_btn" aria-label="설정 버튼"></button>
 
@@ -341,7 +335,7 @@
 										<span class="random">
 											<strong>랜던테마</strong>
 											<button type="button" aria-label="툴팁" class="tooltip_btn"></button>
-											<span class="tooltip">접속할 때마다 선택한 카테고리 내의<br>배경이 무작위로 적용됩니다.</span>
+											<span class="tooltip">접속할 때마다 선택한<br>카테고리 내의 배경이<br>무작위로 적용됩니다.</span>
 										</span>
 									</label>
 								</li>
@@ -468,6 +462,13 @@
 							</ul>
 						</div>
 						<div class="file_wrap">
+							<div class="file_add_wrap">
+								<div class="file_add">
+									<h5>내 이미지 불러오기</h5>
+									<label for="file-input">이미지 파일 불러오기</label>
+									<input type="file" id="file-input" accept="image/*">
+								</div>
+							</div>
 							<div class="file_img_wrap">
 								<div class="file_img">
 									<div class="img_box"><img src="../img/img-bg-01.jpg" alt="배경이미지"></div>
@@ -476,13 +477,6 @@
 									<!-- <h5>불러온 이미지가 없습니다.</h5> -->
 									<h5>현재 불러온 이미지</h5>
 									<p>파일명123457891011.jpg</p>
-								</div>
-							</div>
-							<div class="file_add_wrap">
-								<div class="file_add">
-									<h5>내 이미지 불러오기</h5>
-									<label for="file-input">이미지 파일 불러오기</label>
-									<input type="file" id="file-input" accept="image/*">
 								</div>
 							</div>
 						</div>
@@ -522,6 +516,7 @@
 			</div>
 		</div>
 	</div>
+	<button type="button" aria-label="탑버튼" class="bt_top bt_top2"></button><!-- bt_top -->
 	<script src="../js/common.js"></script>
 </body>
 

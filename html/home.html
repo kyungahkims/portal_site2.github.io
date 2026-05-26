@@ -15,21 +15,10 @@
 </head>
 
 <body>
+	<!-- .wrap에 google, naver, daum 클래스 추가 -->
 	<div class="wrap google">
 		<header>
-			<nav class="nav_wrap">
-				<a href="#" class="home" aria-label="홈"></a>
-				<a href="#">뉴스</a>
-				<a href="#">픽템</a>
-				<a href="#">숏픽</a>
-			</nav>
 			<div class="box">
-				<a href="#" class="mail google">Gmail</a>
-				<a href="#" class="drive google">드라이브</a>
-				<a href="#" class="mail naver">메일</a>
-				<a href="#" class="drive naver">네이버쇼핑</a>
-				<a href="#" class="mail daum">메일</a>
-				<a href="#" class="drive daum">다음쇼핑</a>
 				<button type="button" class="more_btn" aria-label="더보기 버튼"></button>
 				<button type="button" class="setting_btn" aria-label="설정 버튼"></button>
 
@@ -146,8 +135,6 @@
 		<div class="main_bg"></div>
 		<div class="header_mask"></div>
 		<div class="search_wrapper">
-			<!-- .wrap에 google, naver, daum 클래스 추가 -->
-			<div id="logo" class="logo" role="img" aria-label="구글"></div>
 			<div class="search_group">
 				<div class="search_wrap">
 					<!-- .select .select_active 클래스 토글 -->
@@ -724,6 +711,8 @@
 									<span title="국민은행">국민은행</span>
 								</a>
 							</div>
+						</div>
+						<div class="swiper-slide">
 							<div class="site">
 								<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
 								<ul class="more_pop">
@@ -746,8 +735,6 @@
 									<span title="우리은행">우리은행</span>
 								</a>
 							</div>
-						</div>
-						<div class="swiper-slide">
 							<div class="site">
 								<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
 								<ul class="more_pop">
@@ -757,50 +744,6 @@
 								<a href="#">
 									<div class="img_box"><img src="../img/icon-naver.png" alt="네이버" class="img"></div>
 									<span class="title" title="네이버">네이버</span>
-								</a>
-							</div>
-							<div class="site">
-								<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-								<ul class="more_pop">
-									<li><button type="button" class="modify_btn">수정</button></li>
-									<li><button type="button" class="remove_btn">삭제</button></li>
-								</ul>
-								<a href="#">
-									<div class="img_box"><img src="../img/icon-youtobe.png" alt="유튜브" class="img"></div>
-									<span title="유튜브">유튜브</span>
-								</a>
-							</div>
-							<div class="site">
-								<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-								<ul class="more_pop">
-									<li><button type="button" class="modify_btn">수정</button></li>
-									<li><button type="button" class="remove_btn">삭제</button></li>
-								</ul>
-								<a href="#">
-									<div class="img_box"><img src="../img/icon-insta.png" alt="인스타그램" class="img"></div>
-									<span title="인스타그램">인스타그램</span>
-								</a>
-							</div>
-							<div class="site">
-								<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-								<ul class="more_pop">
-									<li><button type="button" class="modify_btn">수정</button></li>
-									<li><button type="button" class="remove_btn">삭제</button></li>
-								</ul>
-								<a href="#">
-									<div class="img_box"><img src="../img/icon-coupang.png" alt="쿠팡" class="img"></div>
-									<span title="쿠팡">쿠팡</span>
-								</a>
-							</div>
-							<div class="site">
-								<button type="button" aria-label="더보기 버튼 (수정/삭제)" class="more_btn"></button>
-								<ul class="more_pop">
-									<li><button type="button" class="modify_btn">수정</button></li>
-									<li><button type="button" class="remove_btn">삭제</button></li>
-								</ul>
-								<a href="#">
-									<div class="img_box"><img src="../img/icon-gmarket.png" alt="지마켓" class="img"></div>
-									<span title="지마켓">지마켓</span>
 								</a>
 							</div>
 							<!-- <div class="site">
@@ -922,23 +865,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="card banner"></div>
-				<!-- <div class="card card1">
-					<div class="card_img"><img src="../img/img-04@3x.jpg" alt="뉴스기사이미지" class="img"></div>
-					<div class="media_wrap">
-						<div class="media_company">
-							<div class="media_logo"></div>국민일보
-						</div>
-						<p class="title">‘탈세 의혹’ 차은우, 국방부도<br>
-							손절… 국방홍보원 영상 삭제</p>
-						<div class="info_wrap">
-							<span class="name">김상기 기자</span>
-							<span class="date">01월 28일 17:32</span>
-						</div>
-					</div>
-				</div> -->
 				<div class="card card2">
-					<div class="live">07.07(월) 12:30<button type="button" aria-label="리로드 버튼" class="reset_btn"></button></div>
+					<div class="live">07.07(월) 12:30<button type="button" aria-label="리로드 버튼" class="reset_btn"></button>
+					</div>
 
 					<div class="weather_box">
 						<div class="weather_img"><img src="../img/ic-cloud-1@3x.png" alt="구름많음" class="img"></div>
@@ -966,6 +895,74 @@
 						</div>
 					</div>
 				</div>
+				<div class="card card7">
+
+					<div class="position_wrap">
+						<div class="area"><button type="button" aria-label="현재 위치 버튼"></button><span>서울시 금천구</span></div>
+						<div class="live">04.27(월) 12:30<button type="button" aria-label="리로드 버튼" class="reset_btn"></button>
+						</div>
+					</div>
+
+					<div class="weather_box">
+						<div class="weather_img"><img src="../img/ic-cloud-1@3x.png" alt="구름많음" class="img"></div>
+
+						<div class="inner">
+							<div class="temp">13.4<span>°C</span></div>
+							<div class="detail">
+								<span class="rainy">76%</span>
+								<span class="windy">5mph</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="cont">
+						<div><span>흐림</span><span>어제보다 1°C 낮아요</span></div>
+						<div>
+							<span>최저 12℃</span><span>최고 18℃</span>
+							<span>미세 <span class="dust"><img src="../img/icon-normal.svg" alt="좋음"></span></span>
+						</div>
+					</div>
+
+					<ul class="weather_group">
+						<li>
+							<span>화</span>
+							<div class="weather_img"><img src="../img/ic-cloud-1@3x.png" alt="구름많음" class="img"></div>
+							<div>10°</div>
+							<div class="lowest">-8°</div>
+						</li>
+						<li>
+							<span>수</span>
+							<div class="weather_img"><img src="../img/ic-rain-1@3x.png" alt="비 또는 눈" class="img"></div>
+							<div>10°</div>
+							<div class="lowest">-8°</div>
+						</li>
+						<li>
+							<span>목</span>
+							<div class="weather_img"><img src="../img/ic-rain-1@3x.png" alt="비 또는 눈" class="img"></div>
+							<div>10°</div>
+							<div class="lowest">-8°</div>
+						</li>
+						<li>
+							<span>금</span>
+							<div class="weather_img"><img src="../img/ic-cloud-1@3x.png" alt="구름많음" class="img"></div>
+							<div>10°</div>
+							<div class="lowest">-8°</div>
+						</li>
+						<li>
+							<span class="blue">토</span>
+							<div class="weather_img"><img src="../img/ic-cloud-3@3x.png" alt="흐림" class="img"></div>
+							<div>10°</div>
+							<div class="lowest">-8°</div>
+						</li>
+						<li>
+							<span class="red">일</span>
+							<div class="weather_img"><img src="../img/ic-cloud-3@3x.png" alt="흐림" class="img"></div>
+							<div>10°</div>
+							<div class="lowest">-8°</div>
+						</li>
+					</ul>
+
+				</div>
 				<div class="card card1">
 					<div class="card_img"><img src="../img/img-04@3x.jpg" alt="뉴스기사이미지" class="img"></div>
 					<div class="media_wrap">
@@ -980,7 +977,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="card banner"></div>
+				<div class="card banner">
+
+				</div>
 				<div class="card card5">
 					<div class="card_img"><img src="../img/20260304_112638.png" alt="기사이미지" class="img"></div>
 					<div class="media_wrap">
@@ -1001,18 +1000,11 @@
 						</div>
 					</div>
 				</div>
-				<div class="card card1">
-					<div class="card_img"><img src="../img/img-04@3x.jpg" alt="뉴스기사이미지" class="img"></div>
+				<div class="card card6">
+					<a href="#" aria-label="모비온 로고" class="mobon_logo"></a>
+					<div class="card_img"><img src="../img/img-main-001@3x.jpg" alt="뉴스기사이미지" class="img"></div>
 					<div class="media_wrap">
-						<div class="media_company">
-							<div class="media_logo"></div>국민일보
-						</div>
-						<p class="title">‘탈세 의혹’ 차은우, 국방부도<br>
-							손절… 국방홍보원 영상 삭제</p>
-						<div class="info_wrap">
-							<span class="name">김상기 기자</span>
-							<span class="date">01월 28일 17:32</span>
-						</div>
+						<p class="title">필드 위, 나만의 완벽한 밸런스를 찾는 여정필드 위, 나만의 완벽한 밸런스를 찾는 여정</p>
 					</div>
 				</div>
 				<div class="card card3">
@@ -1266,7 +1258,7 @@
 										<span class="random">
 											<strong>랜던테마</strong>
 											<button type="button" aria-label="툴팁" class="tooltip_btn"></button>
-											<span class="tooltip">접속할 때마다 선택한 카테고리 내의<br>배경이 무작위로 적용됩니다.</span>
+											<span class="tooltip">접속할 때마다 선택한<br>카테고리 내의 배경이<br>무작위로 적용됩니다.</span>
 										</span>
 									</label>
 								</li>
@@ -1393,6 +1385,13 @@
 							</ul>
 						</div>
 						<div class="file_wrap">
+							<div class="file_add_wrap">
+								<div class="file_add">
+									<h5>내 이미지 불러오기</h5>
+									<label for="file-input">이미지 파일 불러오기</label>
+									<input type="file" id="file-input" accept="image/*">
+								</div>
+							</div>
 							<div class="file_img_wrap">
 								<div class="file_img">
 									<div class="img_box"><img src="../img/img-bg-01.jpg" alt="배경이미지"></div>
@@ -1401,13 +1400,6 @@
 									<!-- <h5>불러온 이미지가 없습니다.</h5> -->
 									<h5>현재 불러온 이미지</h5>
 									<p>파일명123457891011.jpg</p>
-								</div>
-							</div>
-							<div class="file_add_wrap">
-								<div class="file_add">
-									<h5>내 이미지 불러오기</h5>
-									<label for="file-input">이미지 파일 불러오기</label>
-									<input type="file" id="file-input" accept="image/*">
 								</div>
 							</div>
 						</div>

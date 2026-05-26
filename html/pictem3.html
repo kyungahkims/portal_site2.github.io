@@ -26,12 +26,6 @@
 				<a href="#">숏픽</a>
 			</nav>
 			<div class="box">
-				<a href="#" class="mail google">Gmail</a>
-				<a href="#" class="drive google">드라이브</a>
-				<a href="#" class="mail naver">메일</a>
-				<a href="#" class="drive naver">네이버쇼핑</a>
-				<a href="#" class="mail daum">메일</a>
-				<a href="#" class="drive daum">다음쇼핑</a>
 				<button type="button" class="more_btn" aria-label="더보기 버튼"></button>
 				<button type="button" class="setting_btn" aria-label="설정 버튼"></button>
 
@@ -157,8 +151,10 @@
 			<div class="masonry_wrap">
 				<div class="card_wrap">
 					<div class="card big_card">
-						<div class="btn_wrap"><button type="button" class="share_btn"></button></div>
-						<h3>필드 위, 나만의 완벽한 밸런스를 찾는 여정</h3>
+						<div class="card_title">
+							<h3>필드 위, 나만의 완벽한 밸런스를 찾는 여정</h3>
+							<button type="button" class="share_btn"></button>
+						</div>
 						<div class="relation"><span>#골린이</span><span>#운동하는 남자/여자</span><span>#라운딩룩</span></div>
 						<div class="card_img"><img src="../img/img-main-001@3x.png" alt="광고이미지"></div>
 						<div class="center_wrap">
@@ -168,7 +164,7 @@
 								</div>
 								<strong>TAS Weight Kit</strong>
 							</div>
-							<button type="button">원문보기</button>
+							<button type="button" class="original_btn">원문보기</button>
 						</div>
 						<p class="cont">골프는 단순한 스포츠를 넘어, 자신과의 대화이자 필드 위에서 펼쳐지는 하나의 예술에 가깝습니다. 바람의 방향, 잔
 							디의 미세한 변화, 그리고 그날의 컨디션까지, 매 순간 달라지는 변수 속에서 고유의 스윙을 유지하는 것은 끊임없는프는 단순한 스포츠를 넘어, 자신과의 대화이자 필드 위에서 펼쳐지는 하나의
@@ -182,7 +178,9 @@
 							가깝습니다. 바람의 방향, 잔
 							디의 미세한 변화, 그리고 그날의 컨디션까지, 매 순간 달라지는 변수 속에서 고유의 스윙을 유지하는 것은 끊임없는</p>
 						<button type="button" class="sub_more_btn">...더보기</button>
-						<h3 class="icon">스마트 브리핑</h3>
+						<div class="sub_title_wrap">
+							<h3 class="icon">스마트 브리핑</h3><button type="button" class="original_btn">원문보기</button>
+						</div>
 						<ul class="box_list">
 							<li>
 								<h4>맞춤형 골프</h4>
@@ -392,7 +390,7 @@
 										<span class="random">
 											<strong>랜던테마</strong>
 											<button type="button" aria-label="툴팁" class="tooltip_btn"></button>
-											<span class="tooltip">접속할 때마다 선택한 카테고리 내의<br>배경이 무작위로 적용됩니다.</span>
+											<span class="tooltip">접속할 때마다 선택한<br>카테고리 내의 배경이<br>무작위로 적용됩니다.</span>
 										</span>
 									</label>
 								</li>
@@ -519,6 +517,13 @@
 							</ul>
 						</div>
 						<div class="file_wrap">
+							<div class="file_add_wrap">
+								<div class="file_add">
+									<h5>내 이미지 불러오기</h5>
+									<label for="file-input">이미지 파일 불러오기</label>
+									<input type="file" id="file-input" accept="image/*">
+								</div>
+							</div>
 							<div class="file_img_wrap">
 								<div class="file_img">
 									<div class="img_box"><img src="../img/img-bg-01.jpg" alt="배경이미지"></div>
@@ -527,13 +532,6 @@
 									<!-- <h5>불러온 이미지가 없습니다.</h5> -->
 									<h5>현재 불러온 이미지</h5>
 									<p>파일명123457891011.jpg</p>
-								</div>
-							</div>
-							<div class="file_add_wrap">
-								<div class="file_add">
-									<h5>내 이미지 불러오기</h5>
-									<label for="file-input">이미지 파일 불러오기</label>
-									<input type="file" id="file-input" accept="image/*">
 								</div>
 							</div>
 						</div>
@@ -573,7 +571,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="../js/common.js"></script>
+	<button type="button" aria-label="탑버튼" class="bt_top bt_top2"></button><!-- bt_top -->
 	<script>
 		var $grid = $('.card_wrap');
 		var msnry;
@@ -596,14 +594,17 @@
 				const cont = this.previousElementSibling;
 
 				cont.classList.toggle('open');
-				this.textContent = cont.classList.contains('open') ? '접기' : '...더보기';
+
+				const isOpen = cont.classList.contains('open');
+
+				this.textContent = isOpen ? '접기' : '...더보기';
+				this.classList.toggle('active', isOpen);
 
 				setTimeout(() => {
 					$grid.masonry('layout');
 				}, 100);
 			});
 		});
-
 		let resizeTimer;
 
 		window.addEventListener('resize', function () {
@@ -620,6 +621,7 @@
 			}, 150);
 		});
 	</script>
+	<script src="../js/common.js"></script>
 </body>
 
 </html>

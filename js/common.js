@@ -192,7 +192,6 @@ $('.search_more_btn').click(function () {
 
 /* 스크롤 효과 */
 const searchWrapper = document.querySelector('.search_wrapper');
-const logo = document.getElementById('logo');
 const headerMask = document.querySelector('.header_mask');
 const contentArea = document.querySelector('.content_area');
 const siteGroup = document.querySelector('.swiper_group');
@@ -205,12 +204,10 @@ function updateSearchWrapper() {
 
 	const progress = Math.min(scrollY / threshold, 1);
 
-	const startTop = -50;
-	const endTop = -240;
+	const startTop = -40;
+	const endTop = -130;
 	const currentTop = startTop - (startTop - endTop) * progress;
 	searchWrapper.style.top = `${currentTop}px`;
-
-	logo.style.opacity = 1 - progress;
 
 	const searchRect = searchWrapper.getBoundingClientRect();
 	headerMask.style.height = `${searchRect.bottom}px`;
@@ -224,7 +221,7 @@ function updateSearchWrapper() {
 	if (scrollY === 0) {
 		siteGroup.classList.remove('hide');
 		headerMask.classList.remove('active');
-	} else if (scrollY > vh - 750) {
+	} else if (scrollY > vh - 630) {
 		siteGroup.classList.add('hide');
 		headerMask.classList.add('active');
 	} else {
@@ -269,23 +266,6 @@ const swiper0 = new Swiper('.swiper_group > .swiper', {
 	}
 });
 
-/* 뉴스 피드 토글 */
-const newssetBtn = document.querySelector('.newsset_btn');
-const newsPop = document.querySelector('.news_pop');
-
-newssetBtn.addEventListener('click', function () {
-	newsPop.classList.toggle('active');
-});
-
-/* 뉴스 피드 설정 */
-const buttons = document.querySelectorAll('.toggle_btn');
-
-buttons.forEach(button => {
-	button.addEventListener('click', function () {
-		this.classList.toggle('active');
-	});
-});
-
 /* 이미지 전환 */
 const boxes = document.querySelectorAll('.swiper-slide .img_box.fade');
 
@@ -324,3 +304,20 @@ function onTopClick() {
 window.addEventListener("scroll", onScroll);
 onScroll();
 document.querySelector(".bt_top").addEventListener("click", onTopClick);
+
+/* 뉴스 피드 토글 */
+const newssetBtn = document.querySelector('.newsset_btn');
+const newsPop = document.querySelector('.news_pop');
+
+newssetBtn.addEventListener('click', function () {
+	newsPop.classList.toggle('active');
+});
+
+/* 뉴스 피드 설정 */
+const buttons = document.querySelectorAll('.toggle_btn');
+
+buttons.forEach(button => {
+	button.addEventListener('click', function () {
+		this.classList.toggle('active');
+	});
+});
