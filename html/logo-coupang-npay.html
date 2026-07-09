@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Coupang / N Pay 3D Rotate</title>
+<style>
+  :root{
+    --stage-w: 52px;
+    --stage-h: 52px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .stage{
+    position:relative;
+    width:var(--stage-w);
+    height:var(--stage-h);
+  }
+
+  canvas{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+  }
+</style>
+</head>
+<body>
+
+  <div class="stage">
+    <canvas id="cv"></canvas>
+  </div>
+
+<script>
+  // 왕복 회전 시나리오:
+  //  쿠팡 정면(0도) → 왼쪽으로 회전, 90도를 지나 125도까지는 쿠팡의 뒷면이 보임
+  //  → 125도 부근에서 N Pay로 크로스페이드 → 180도에서 N Pay 정면, 0.1초 정지
+  //  → 오른쪽으로 복귀 (역순) → 쿠팡 정면 0.1초 정지 → 반복
+  const COUPANG_SRC = 'data:image/png;base64,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';
+  const NPAY_SRC = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMS44MzYiIGhlaWdodD0iMTAuODYyIiB2aWV3Qm94PSIwIDAgMzEuODM2IDEwLjg2MiI+CiAgICA8cGF0aCBkPSJNMTAuODU4IDUuNDJBNS40MzEgNS40MzEgMCAxIDEgNi44MzMuMTc1YTUuNDMxIDUuNDMxIDAgMCAxIDQuMDI1IDUuMjQ1ek02LjMzNiAyLjg2OFY1LjZsLTEuOS0yLjczSDIuODc1djUuMTFoMS42NDNWNS4yNDFsMS45IDIuNzMyaDEuNTY2di01LjF6bTI0LjIxNy0uMjg0LTEuNTE2IDMuNDUzLTEuNzE0LTMuNDUzaC0xLjMxOGwyLjQyNyA0Ljc5LTEgMi4yNDVoMS4yOGwzLjEyLTcuMDI4em0tNS4zOSA1LjMzOWgtMS4yNTJ2LS41YTIuNDUgMi40NSAwIDAgMS0xLjY0OS42MDcgMi43IDIuNyAwIDAgMS0yLjY3LTIuNzc4IDIuNyAyLjcgMCAwIDEgMi42Ny0yLjc3OCAyLjQ1IDIuNDUgMCAwIDEgMS42NDkuNjA2di0uNWgxLjI1M3ptLTEuMTA1LTIuNjYyYTEuNjM5IDEuNjM5IDAgMSAwLTMuMjY3IDAgMS42MzkgMS42MzkgMCAxIDAgMy4yNjcgMHpNMTMuNCA5LjYxOWgxLjNWNy40N2EyLjQzNCAyLjQzNCAwIDAgMCAxLjU5NC41NjIgMi43IDIuNyAwIDAgMCAyLjY3Ni0yLjc3OCAyLjcgMi43IDAgMCAwLTIuNjctMi43NzkgMi40MzggMi40MzggMCAwIDAtMS42NTMuNjA2di0uNWgtMS4yNTN6bTIuNzQ0LTYuMTI5YTEuNjcxIDEuNjcxIDAgMCAxIDEuNjM0IDEuNzcxIDEuNjM5IDEuNjM5IDAgMSAxLTMuMjY3IDAgMS42NjYgMS42NjYgMCAwIDEgMS42MzMtMS43NzF6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSguMDAzIC4wMTEpIiBzdHlsZT0iZmlsbDojMDBkZTVhIi8+CiAgICA8cGF0aCBkPSJNNi4zMzYgMi44NjhWNS42bC0xLjktMi43M0gyLjg3NXY1LjExaDEuNjQzVjUuMjQxbDEuOSAyLjczMmgxLjU2NnYtNS4xeiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjAwMyAuMDExKSB0cmFuc2xhdGUoNS40MyA1LjQyKSBzY2FsZSgxLjMyKSB0cmFuc2xhdGUoLTUuNDMgLTUuNDIpIiBzdHlsZT0iZmlsbDojZmZmIi8+Cjwvc3ZnPgo=';
+
+  const DEG = d => d * Math.PI / 180;
+  const LOGO_W = 36;
+  const DEPTH = 7;
+  const N = 10;
+  const TILT = DEG(-12);
+  const MIN_W = 1;
+
+  const HALF = 2.5;        // 편도(180도) 시간(초)
+  const DWELL = 0.4;       // 정면 정지 시간(초)
+  const SWAP = DEG(125);   // 쿠팡 → N Pay 교체 각도 (90도보다 더 돈 지점)
+  const FADE = DEG(16);    // 교체 크로스페이드 폭
+
+  const cv = document.getElementById('cv');
+  const ctx = cv.getContext('2d');
+  const STEPS = 6;
+  const DPR = Math.min(window.devicePixelRatio || 1, 2);
+
+  function loadLogo(src, dispW, dispH){
+    return new Promise(resolve => {
+      const img = new Image();
+      img.onload = () => {
+        const bw = Math.round(dispW * DPR);
+        const bh = Math.round(dispH * DPR);
+        function bake(brightness, mirror){
+          const c = document.createElement('canvas');
+          c.width = bw; c.height = bh;
+          const g = c.getContext('2d');
+          if (mirror){ g.translate(bw, 0); g.scale(-1, 1); }
+          g.drawImage(img, 0, 0, bw, bh);
+          g.setTransform(1,0,0,1,0,0);
+          g.globalCompositeOperation = 'source-atop';
+          g.fillStyle = 'rgba(0,0,0,' + (1 - brightness).toFixed(3) + ')';
+          g.fillRect(0, 0, bw, bh);
+          return c;
+        }
+        const front = [], back = [];
+        for (let s = 0; s < STEPS; s++){
+          const b = 0.55 + (s / (STEPS - 1)) * 0.45; // 작은 크기: 음영을 밝게 유지
+          front.push(bake(b, false));
+          back.push(bake(b, true));
+        }
+        resolve({ front, back, w: dispW, h: dispH });
+      };
+      img.src = src;
+    });
+  }
+
+  // 임의 각도의 로고를 그린다 (뒷면은 좌우반전 이미지, 화가 알고리즘)
+  function drawLogo(logo, theta, alpha, CX, CY){
+    if (alpha <= 0.003) return;
+    const cos = Math.cos(theta), sin = Math.sin(theta);
+    const facingBack = cos < 0;
+    const imgs = facingBack ? logo.back : logo.front;
+    const sliceW = Math.max(logo.w * Math.abs(cos), MIN_W);
+
+    ctx.globalAlpha = alpha;
+    for (let k = 0; k <= N; k++){
+      const zi = facingBack ? (N - k) : k;
+      const z = -DEPTH/2 + (DEPTH * zi) / N;
+      const px = z * sin;
+      const py = -z * cos * Math.sin(TILT);
+      const step = Math.min(STEPS - 1, Math.round((k / N) * (STEPS - 1)));
+      ctx.drawImage(imgs[step],
+        CX + px - sliceW / 2,
+        CY + py - logo.h / 2,
+        sliceW, logo.h);
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  const clamp01 = v => Math.max(0, Math.min(1, v));
+  const smooth = v => { v = clamp01(v); return v * v * (3 - 2 * v); };
+
+  Promise.all([
+    loadLogo(COUPANG_SRC, LOGO_W, LOGO_W),
+    loadLogo(NPAY_SRC, 44, 15)   // 46x16에서 2px 줄임
+  ]).then(([coupang, npay]) => {
+
+    const stage = cv.parentElement.getBoundingClientRect();
+    cv.width  = Math.round(stage.width * DPR);
+    cv.height = Math.round(stage.height * DPR);
+    ctx.scale(DPR, DPR);
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+    const CX = stage.width / 2, CY = stage.height / 2;
+
+    const CYC = 2 * (HALF + DWELL);
+    const t0 = performance.now();
+
+    function frame(now){
+      const t = (((now - t0) / 1000)) % CYC;
+      let p;
+      if (t < HALF)                    p = t / HALF;                       // 쿠팡 → N Pay
+      else if (t < HALF + DWELL)       p = 1;                              // N Pay 정면 정지
+      else if (t < 2 * HALF + DWELL)   p = 1 - (t - HALF - DWELL) / HALF;  // N Pay → 쿠팡
+      else                             p = 0;                              // 쿠팡 정면 정지
+
+      // 코사인 이징: 정면에서 느리고 옆면에서 빠르게
+      const theta = -(Math.PI / 2) * (1 - Math.cos(Math.PI * p));
+      const ang = -theta; // 0(쿠팡 정면) ~ PI(N Pay 정면)
+
+      // 교체 각도(125도) 전까지는 쿠팡(뒷면 포함)이 보이고, 그 후 N Pay로 크로스페이드
+      const mix = smooth((ang - (SWAP - FADE)) / FADE);
+
+      ctx.clearRect(0, 0, stage.width, stage.height);
+      drawLogo(coupang, theta, 1 - mix, CX, CY);
+      drawLogo(npay, theta + Math.PI, mix, CX, CY);
+
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  });
+</script>
+
+</body>
+</html>

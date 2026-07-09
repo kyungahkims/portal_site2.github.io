@@ -266,22 +266,6 @@ const swiper0 = new Swiper('.swiper_group > .swiper', {
 	}
 });
 
-/* 이미지 전환 */
-const boxes = document.querySelectorAll('.swiper-slide .img_box.fade');
-
-boxes.forEach(box => {
-	const images = box.querySelectorAll('.swiper-slide .img_box .img');
-	let current = 0;
-
-	setInterval(() => {
-		images[current].classList.remove('active');
-
-		current = (current + 1) % images.length;
-
-		images[current].classList.add('active');
-	}, 2000);
-});
-
 /* 스크롤 탑 버튼 */
 function onScroll() {
 	const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -321,3 +305,56 @@ buttons.forEach(button => {
 		this.classList.toggle('active');
 	});
 });
+
+/* 토스트 팝업 */
+const tPops = document.querySelectorAll('.t_pop');
+
+if (tPops.length > 0) {
+	tPops.forEach(tPop => {
+		tPop.style.transition = 'none';
+		tPop.style.opacity = '0';
+		tPop.style.top = '-20px';
+
+		setTimeout(() => {
+			tPop.style.transition = 'all 0.5s ease-out';
+			tPop.style.opacity = '1';
+			tPop.style.top = '50px';
+		}, 30);
+
+		setTimeout(() => {
+			tPop.style.transition = 'opacity 0.8s ease-in-out, top 0.5s ease-in 0.3s';
+			tPop.style.opacity = '0';
+			tPop.style.top = '-20px';
+
+			setTimeout(() => {
+				tPop.remove();
+			}, 800);
+		}, 2500);
+	});
+}
+
+/* 적립 팝업 자동 닫기 */
+const tPop2s = document.querySelectorAll('.t_pop2');
+if (tPop2s.length > 0) {
+	tPop2s.forEach(tPop2 => {
+		setTimeout(() => {
+			tPop2.style.transition = 'opacity 0.5s ease-in-out';
+			tPop2.style.opacity = '0';
+			setTimeout(() => {
+				tPop2.style.display = 'none';
+			}, 500);
+		}, 2600);
+
+		const confirmBtn = tPop2.querySelector('.btn_confirm');
+		if (confirmBtn) {
+			confirmBtn.addEventListener('click', function (e) {
+				e.preventDefault();
+				tPop2.style.transition = 'opacity 0.3s ease-in-out';
+				tPop2.style.opacity = '0';
+				setTimeout(() => {
+					tPop2.style.display = 'none';
+				}, 300);
+			});
+		}
+	});
+}
